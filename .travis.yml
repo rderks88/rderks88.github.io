@@ -6,6 +6,8 @@ cache:
   directories:
     - "node_modules"
 
+# usually you would use "master" here but since this is the root personal project, can only use the master branch
+# https://stackoverflow.com/questions/39978856/unable-to-change-source-branch-in-github-pages
 branches:
   only:
     - development
