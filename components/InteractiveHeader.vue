@@ -4,31 +4,35 @@
       <div class="translate-wrapper" :style="{ transform: `translateX(${translate}px)` }">
         <div
           id="left-image"
-          :style="{ backgroundImage: `url(${lookingLeft})`, 'clip-path': `inset(0 0 0 ${invertedRelativeX}%)` }"
+          :style="{ backgroundImage: `url(${lookingLeft})`, 'clip-path': `inset(0 0 0 ${percentage}%)` }"
         />
         <div
           id="right-image"
-          :style="{ backgroundImage: `url(${lookingRight})`, 'clip-path': `inset(0 ${relativeX}% 0 0)` }"
+          :style="{ backgroundImage: `url(${lookingRight})`, 'clip-path': `inset(0 ${invertedPercentage}% 0 0)` }"
         />
       </div>
     </div>
     <div class="columns is-centered is-desktop">
-      <div class="column is-2">
-        <h1 class="title">
-          Business
-        </h1>
-        <h2 class="subtitle">
-          Technology solutions that sell. That is scalable.
-        </h2>
-      </div>
-      <div class="column is-4" />
-      <div class="column is-2">
-        <h1 class="title has-text-right is-family-code">
-          Code
-        </h1>
-        <h2 class="subtitle has-text-right is-family-code">
-          Building projects that make a difference drives me.
-        </h2>
+      <div class="column is-8">
+        <div class="columns is-5">
+          <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(invertedPercentage) }">
+            <h1 class="title is-3 is-spaced has-text-grey-dark is-uppercase">
+              Business
+            </h1>
+            <h2 class="subtitle is-4 has-text-grey">
+              Facilitating development of scalable products to generate business efficiency and revenue.
+            </h2>
+          </div>
+          <div class="column" />
+          <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(percentage) }">
+            <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right is-family-code is-uppercase">
+              &#60;code/&#62;
+            </h1>
+            <h2 class="subtitle is-4 has-text-grey has-text-right is-family-code">
+              Making a difference by building elegant solutions to complex problems.
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -43,41 +47,99 @@ export default {
     return {
       lookingLeft,
       lookingRight,
-      oldRelativeX: 50,
-      relativeX: 50,
-      invertedRelativeX: 50,
-      translate: 50
+      leftIdle: 35,
+      rightIdle: 65,
+      percentage: this.leftIdle,
+      invertedPercentage: this.rightIdle,
+      oldPercentage: null,
+      translate: 0,
+      idleTimer: null,
+      leftCrossEyed: 45,
+      rightCrossEyed: 52,
+      crossEyedTimer: null
     }
   },
   mounted () {
-    document.getElementById('interactive-header').addEventListener('mousemove', (event) => {
-      this.handler(event)
+    const interactiveHeader = document.getElementById('interactive-header')
 
-      // if (this.timeout) { clearTimeout(this.timeout) }
-      // this.timeout = setTimeout(() => {
-      //   this.handler(event)
-      // }, 200)
+    interactiveHeader.addEventListener('mousemove', (event) => {
+      this.handler(event)
     })
-    document.getElementById('interactive-header').addEventListener('mouseout', (event) => {
-      this.relativeX = 50
-      this.invertedRelativeX = 50
+
+    interactiveHeader.addEventListener('mouseout', (event) => {
+      this.behaveIdle()
     })
+
+    interactiveHeader.addEventListener('mouseover', (event) => {
+      this.stopIdle()
+    })
+
+    this.behaveIdle()
   },
   methods: {
+    behaveIdle () {
+      clearInterval(this.idleTimer)
+      this.idleTimer = setInterval(() => {
+        console.log('behaveIdle')
+        if (this.percentage >= 50) {
+          this.shift(this.leftIdle)
+        } else {
+          this.shift(this.rightIdle)
+        }
+      }, 3000)
+    },
+    stopIdle () {
+      clearInterval(this.idleTimer)
+      this.idleTimer = null
+    },
+    checkCrossEyed () {
+      if (this.percentage > this.leftCrossEyed && this.percentage < this.rightCrossEyed) {
+        clearTimeout(this.crossEyedTimer)
+        this.crossEyedTimer = setTimeout(() => {
+          this.$buefy.toast.open({
+            duration: 3000,
+            message: 'That just looks silly 😉',
+            position: 'is-bottom',
+            type: 'is-info'
+          })
+          this.stopCrossEyed()
+          this.shift(this.leftIdle)
+        }, 1500)
+      } else {
+        this.stopCrossEyed()
+      }
+    },
+    stopCrossEyed () {
+      clearTimeout(this.crossEyedTimer)
+      this.crossEyedTimer = null
+    },
     handler (e) {
-      e = e || window.event
-
       const pageWidth = window.innerWidth
       const pageX = e.pageX
 
-      const relativeX = (pageX / pageWidth) * 100
+      const percentage = (pageX / pageWidth) * 100
 
-      if (Math.abs(relativeX - this.oldRelativeX) > 5) {
-        this.oldRelativeX = relativeX
-        this.relativeX = relativeX
-        this.translate = relativeX - 50
-        this.invertedRelativeX = 100 - this.relativeX
+      if (Math.abs(percentage - this.oldPercentage) > 1) {
+        this.checkCrossEyed()
+        this.shift(percentage)
       }
+    },
+    shift (newPercentage) {
+      newPercentage = Math.round(newPercentage)
+      // console.log('percentage:', newPercentage)
+      this.oldPercentage = newPercentage
+      this.percentage = newPercentage
+      this.translate = -1 * (Math.max(-100, Math.min((newPercentage - 50) * 3, 100)))
+      this.invertedPercentage = 100 - this.percentage
+    },
+    returnOpacity (percentage) {
+      if (percentage < 25) {
+        return 0
+      }
+      if (percentage >= 60) {
+        return 1
+      }
+      return Math.round(percentage) * 0.01
     }
   }
 }
@@ -89,12 +151,19 @@ export default {
     min-height: 550px;
     height: 60vh;
     position: relative;
-    background: rgba(blue, 0.1);
+
+    & .title{
+      margin-top: 30px;
+    }
+
+    & .subtitle{
+      line-height: 1.5;
+    }
 
     & .image-wrapper {
-      background: rgba(red, 0.1);
+      z-index: 1;
       width: 70vw;
-      height: 95%;
+      height: 90%;
       position: absolute;
       left: 50%;
       bottom: 0;
@@ -106,7 +175,7 @@ export default {
         height: 100%;
         width: 100%;
         position: absolute;
-        transition: transform 0.75s;
+        transition: transform 1s;
 
         & > #left-image,
         & > #right-image {
@@ -118,18 +187,15 @@ export default {
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center bottom;
-          transition: clip-path 0.75s;
+          transition: clip-path 1.3s;
         }
-
       }
-
-      /*& > #left-image{*/
-      /*  clip-path: inset(0 0 0 50%);*/
-      /*}*/
-      /*& > #right-image{*/
-      /*  clip-path: inset(0 50% 0 0);*/
-      /*}*/
     }
+
+    & .opacity-text {
+      transition: opacity 1s;
+    }
+
   }
 
 </style>
