@@ -1,15 +1,25 @@
 <template>
   <div>
-    <nav class="navbar is-fixed-top is-primary is-spaced" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar is-fixed-top is-primary is-spaced"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          <img src="~/assets/code.png" width="35" height="35" alt="Logo Rob Derks">
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
         </a>
       </div>
 
@@ -49,19 +59,35 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
+              <b-tooltip
+                label="Email"
+                position="is-bottom"
+              >
+                <a class="button is-primary">
+                  <b-icon
+                    icon="email"
+                    size="is-small"
+                  />
+                </a>
+              </b-tooltip>
+              <b-tooltip
+                label="LinkedIn"
+                position="is-bottom"
+              >
+                <a class="button is-primary">
+                  <b-icon
+                    icon="linkedin"
+                    size="is-small"
+                  />
+                </a>
+              </b-tooltip>
             </div>
           </div>
         </div>
       </div>
     </nav>
 
-    <div id="app" class="container column is-10">
+    <div id="app">
       <nuxt />
     </div>
   </div>
@@ -88,3 +114,7 @@ export default {
   }
 }
 </script>
+
+<style lang=scss>
+
+</style>

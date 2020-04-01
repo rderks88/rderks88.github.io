@@ -1,0 +1,25 @@
+/**
+ * Any overrides for Bulma variables go in this file
+ */
+
+// Custom variables go here
+/**
+ * Fonts
+ */
+$family-primary: "Roboto", sans-serif;
+$family-secondary: "Roboto", sans-serif;
+$family-serif: "Roboto", serif;
+$family-sans-serif: $family-primary;
+$family-monospace: "Source Code Pro", monospace;
+$family-code: "Source Code Pro", monospace;
+
+/**
+ * Colors
+ */
+$primary: #3DBB69;
+
+//@import "../assets/scss/overrides";
+// Import Bulma and Buefy styles
+@import "~bulma/sass/utilities/_all";
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
