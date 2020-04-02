@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="columns is-centered is-desktop">
-      <div class="column is-8">
+      <div class="column is-9-desktop">
         <div class="columns is-5">
           <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(invertedPercentage) }">
             <h1 class="title is-3 is-spaced has-text-grey-dark is-uppercase">
@@ -80,7 +80,7 @@ export default {
     behaveIdle () {
       clearInterval(this.idleTimer)
       this.idleTimer = setInterval(() => {
-        console.log('behaveIdle')
+        // console.log('behaveIdle')
         if (this.percentage >= 50) {
           this.shift(this.leftIdle)
         } else {

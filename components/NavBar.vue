@@ -3,81 +3,52 @@
     class="navbar is-fixed-top is-primary"
     :class="{'is-spaced': isAtTopOfPage}"
     role="navigation"
+    :mobile-burger="false"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="~/assets/code.png" width="35" height="35" alt="Logo Rob Derks">
-      </a>
-
-      <a
-        role="button"
-        class="navbar-burger burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
+      <a class="navbar-item" href="https://www.robderks.com">
+        <img src="~/assets/logo.png" width="35" height="35" alt="Logo Rob Derks">
       </a>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item">
-          Home
+          Business
         </a>
 
         <a class="navbar-item">
-          Documentation
+          Code
         </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <b-tooltip
-              label="Email"
+              label="hello@robderks.com"
               position="is-bottom"
+              type="is-dark"
+              :animated="true"
             >
-              <a class="button is-primary">
+              <a class="button is-primary" href="mailto:hello@robderks.com" target="_top">
                 <b-icon
                   icon="email"
-                  size="is-small"
+                  custom-size="mdi-24px"
                 />
               </a>
             </b-tooltip>
             <b-tooltip
               label="LinkedIn"
               position="is-bottom"
+              type="is-dark"
+              :animated="true"
             >
-              <a class="button is-primary">
+              <a class="button is-primary" href="https://www.linkedin.com/in/iamrobderks/" target="_blank">
                 <b-icon
                   icon="linkedin"
-                  size="is-small"
+                  custom-size="mdi-24px"
                 />
               </a>
             </b-tooltip>
@@ -98,7 +69,6 @@ export default {
     window.addEventListener('scroll', () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       this.isAtTopOfPage = scrollTop < 50
-      console.log(scrollTop)
     })
   }
 }
@@ -106,5 +76,6 @@ export default {
 <style lang="scss">
   .navbar{
     transition: padding 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
   }
 </style>
