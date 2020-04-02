@@ -43,7 +43,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    '~/plugins/vue-observe-visibility'
+  ],
   /*
   ** Nuxt.js dev-modules
   */
@@ -55,6 +57,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@neneos/nuxt-animate.css',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage

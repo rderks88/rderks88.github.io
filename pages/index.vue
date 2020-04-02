@@ -1,6 +1,6 @@
 <template>
   <div id="index-wrapper">
-    <interactive-header />
+    <interactive-header/>
 
     <section class="section">
       <div class="columns is-multiline is-centered is-desktop">
@@ -12,17 +12,17 @@
       </div>
       <div class="columns is-multiline is-centered is-desktop">
         <div class="column is-9-desktop is-7-widescreen">
-          <p class="bd-notification is-primary">
-            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin tot
-            een effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb opgedaan wil ik delen
-            met jou. Laten we samen bouwen aan jouw product. Zet me in als adviseur, product owner of als senior
-            programmeur. Hoe kan ik jou helpen?
+          <p>
+            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin
+            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb
+            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als
+            senior programmeur. Hoe kan ik jou helpen?
           </p>
         </div>
       </div>
     </section>
 
-    <my-work />
+    <my-work/>
 
     <section class="section">
       <div class="columns is-multiline is-centered is-desktop">
@@ -39,7 +39,7 @@
       </div>
     </section>
 
-    <contact-form />
+    <contact-form/>
   </div>
 </template>
 
@@ -89,13 +89,13 @@ export default {
     &::after {
       content: '';
       display: block;
-      width: calc( 100% - 40px);
+      width: calc(100% - 40px);
       height: 1px;
       left: 20px;
       top: calc(50% - 10px);
       background: $grey-lighter;
       position: absolute;
-      z-index:1;
+      z-index: 1;
     }
 
     & h3 {
@@ -105,7 +105,7 @@ export default {
       position: relative;
       padding: 0 30px;
       background: $white;
-      z-index:2;
+      z-index: 2;
     }
   }
 

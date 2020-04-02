@@ -1,20 +1,40 @@
 <template>
-  <div id="website">
+  <div
+    id="website"
+    v-observe-visibility="visibilityChanged"
+    :class="{'animated fadeIn slideInLeft delay-1s slow': isVisible}"
+  >
     <div id="computerscreen">
-      <slot name="default"/>
+      <slot name="default" />
     </div>
     <div class="dots">
-      <div class="dot"/>
-      <div class="dot"/>
-      <div class="dot"/>
+      <div class="dot" />
+      <div class="dot" />
+      <div class="dot" />
     </div>
     <div class="burgers">
-      <div class="burger"/>
-      <div class="burger"/>
-      <div class="burger"/>
+      <div class="burger" />
+      <div class="burger" />
+      <div class="burger" />
     </div>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      isVisible: false
+    }
+  },
+  methods: {
+    visibilityChanged (visible) {
+      if (visible) {
+        this.isVisible = true
+      }
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 
   /* phone */
