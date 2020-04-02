@@ -13,7 +13,7 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
+      <!--<div class="navbar-start">
         <a class="navbar-item">
           Business
         </a>
@@ -21,6 +21,11 @@
         <a class="navbar-item">
           Code
         </a>
+      </div>-->
+      <div class="navbar-start">
+        <h1 class="title is-4 has-text-white is-marginless upper">
+          &nbsp;Rob Derks
+        </h1>
       </div>
 
       <div class="navbar-end">
@@ -74,8 +79,8 @@ export default {
 }
 </script>
 <style lang="scss">
-  .navbar{
+  .navbar {
     transition: padding 0.5s;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
   }
 </style>

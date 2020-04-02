@@ -1,62 +1,63 @@
 <template>
-  <div id="phone">
-    <div id="screen">
-      <div class="pages">
-        <slot name="default" />
-      </div>
+  <div id="website">
+    <div id="computerscreen">
+      <slot name="default"/>
     </div>
-    <div id="home" />
-    <div id="speaker" />
+    <div class="dots">
+      <div class="dot"/>
+      <div class="dot"/>
+      <div class="dot"/>
+    </div>
+    <div class="burgers">
+      <div class="burger"/>
+      <div class="burger"/>
+      <div class="burger"/>
+    </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 
   /* phone */
-  #phone {
-    width: 310px;
-    height: 640px;
-    border: 2px solid #ccc;
-    border-radius: 30px;
+  #website {
+    background-color: $white-ter;
+    padding: 40px 0 0;
+    border-radius: 2px;
     position: relative;
     margin: 0 0;
-    background: #fff;
-  }
-  #screen {
-    width: 290px;
-    height: 520px;
-    border: 1px solid #ccc;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -260px -145px;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  #home {
-    width: 36px;
-    height: 36px;
-    border: 1px solid #ccc;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin: 0 -18px;
-    border-radius: 50%;
-  }
-  #speaker {
-    width: 50px;
-    height: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    position: absolute;
-    left: 50%;
-    top: 25px;
-    margin: 0 -25px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    line-height:0;
+
+    & .dots {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      & .dot {
+        float:left;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        margin-right:5px;
+        background: $grey-lighter;
+      }
+    }
+
+    & .burgers {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      & .burger {
+        width: 20px;
+        height: 3px;
+        border-radius: 8px;
+        margin-bottom:4px;
+        background: $grey-lighter;
+      }
+    }
   }
 
-  .pages {
-    z-index: 1;
-    position: absolute;
-    width: 318px;
-    height: 100%;
+  #computerscreen {
+    /*width: 290px;
+    border: 1px solid #ccc;
+    overflow: hidden;*/
   }
 </style>

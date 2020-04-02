@@ -7,16 +7,15 @@
         </h3>
       </div>
     </div>
-    <div class="columns is-multiline is-centered is-desktop">
+    <div class="project-wrapper columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-7-widescreen">
-        <div class="columns is-multiline">
-
+        <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
             <website>
               <img src="~/assets/screencapture-yubu.png" alt="Screenshot van de Yubu-website">
             </website>
           </div>
-          <div class="column is-6">
+          <div class="column">
             <h5 class="subtitle is-6 has-text-grey-light">
               <b-icon
                 icon="calendar"
@@ -38,9 +37,14 @@
               deserunt mollit anim id est laborum.
             </p>
           </div>
-
+        </div>
+      </div>
+    </div>
+    <div class="project-wrapper columns is-multiline is-centered is-desktop">
+      <div class="column is-9-desktop is-7-widescreen">
+        <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
-            <h5 class="subtitle is-6 has-text-grey-light has-text-right">
+            <h5 class="subtitle has-text-grey-light has-text-right">
               2020 - current project
               <b-icon
                 icon="calendar"
@@ -62,12 +66,11 @@
               deserunt mollit anim id est laborum.
             </p>
           </div>
-          <div class="column is-6">
-            <website>
-              <img src="~/assets/screencapture-yubu.png" alt="Screenshot van de Yubu-website">
-            </website>
+          <div class="column is-narrow has-text-right">
+            <phone>
+              <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot van de Greenlancers-app">
+            </phone>
           </div>
-
         </div>
       </div>
     </div>
@@ -76,10 +79,18 @@
 <script>
 
 import Website from '~/components/Website'
+import Phone from '~/components/Phone'
 
 export default {
   components: {
-    Website
+    Website,
+    Phone
   }
 }
 </script>
+
+<style lang="scss">
+  .project-wrapper{
+    padding-bottom: 50px;
+  }
+</style>

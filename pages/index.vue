@@ -83,7 +83,7 @@ export default {
 
     position: relative;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     padding-top: 30px;
 
     &::after {
