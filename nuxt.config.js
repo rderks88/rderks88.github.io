@@ -57,7 +57,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@neneos/nuxt-animate.css',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
@@ -92,6 +91,17 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: [
+          'babel-loader',
+          'vue-svg-loader'
+        ]
+      })
     }
   }
 }

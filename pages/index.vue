@@ -22,22 +22,9 @@
       </div>
     </section>
 
-    <my-work/>
+    <my-work />
 
-    <section class="section">
-      <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-7-widescreen column-title-wrapper">
-          <h3 class="title is-4 has-text-centered is-uppercase">
-            Skillset
-          </h3>
-        </div>
-      </div>
-      <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-7-widescreen">
-          hallo
-        </div>
-      </div>
-    </section>
+    <skill-set />
 
     <contact-form/>
   </div>
@@ -47,12 +34,14 @@
 
 import InteractiveHeader from '~/components/InteractiveHeader'
 import MyWork from '~/components/MyWork'
+import SkillSet from '~/components/SkillSet'
 import ContactForm from '~/components/ContactForm'
 
 export default {
   components: {
     InteractiveHeader,
     MyWork,
+    SkillSet,
     ContactForm
   }
 }

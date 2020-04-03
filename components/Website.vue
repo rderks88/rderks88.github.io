@@ -1,8 +1,6 @@
 <template>
   <div
     id="website"
-    v-observe-visibility="visibilityChanged"
-    :class="{'animated fadeIn slideInLeft delay-1s slow': isVisible}"
   >
     <div id="computerscreen">
       <slot name="default" />
@@ -19,22 +17,6 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data () {
-    return {
-      isVisible: false
-    }
-  },
-  methods: {
-    visibilityChanged (visible) {
-      if (visible) {
-        this.isVisible = true
-      }
-    }
-  }
-}
-</script>
 <style lang="scss" scoped>
 
   /* phone */

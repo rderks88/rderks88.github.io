@@ -11,9 +11,11 @@
       <div class="column is-9-desktop is-7-widescreen">
         <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
-            <website>
-              <img src="~/assets/screencapture-yubu.png" alt="Screenshot van de Yubu-website">
-            </website>
+            <animate-on-visible-wrapper position="left">
+              <website>
+                <img src="~/assets/screencapture-yubu.png" alt="Screenshot van de Yubu-website">
+              </website>
+            </animate-on-visible-wrapper>
           </div>
           <div class="column">
             <h5 class="subtitle is-6 has-text-grey-light">
@@ -27,7 +29,7 @@
               CTO Yubu
             </h3>
             <h5 class="subtitle is-5 has-text-grey-dark">
-              Saas solution voor studiekeuze van middelbare scholieren
+              SaaS solution voor studiekeuze van middelbare scholieren
             </h5>
             <p class="has-text-justified">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -67,9 +69,11 @@
             </p>
           </div>
           <div class="column is-narrow has-text-right">
-            <phone>
-              <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot van de Greenlancers-app">
-            </phone>
+            <animate-on-visible-wrapper position="right">
+              <phone>
+                <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot van de Greenlancers-app">
+              </phone>
+            </animate-on-visible-wrapper>
           </div>
         </div>
       </div>
@@ -80,17 +84,19 @@
 
 import Website from '~/components/Website'
 import Phone from '~/components/Phone'
+import AnimateOnVisibleWrapper from '~/components/AnimateOnVisibleWrapper'
 
 export default {
   components: {
     Website,
-    Phone
+    Phone,
+    AnimateOnVisibleWrapper
   }
 }
 </script>
 
 <style lang="scss">
-  .project-wrapper{
+  .project-wrapper {
     padding-bottom: 50px;
   }
 </style>
