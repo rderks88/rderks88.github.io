@@ -3,7 +3,7 @@
     v-observe-visibility="visibilityChanged"
     class=""
     :class="{
-      'animated delay-500ms fast': isVisible,
+      'animated delay-250ms fast': isVisible,
       fadeInLeft: isVisible && position === 'left',
       fadeInRight: isVisible && position === 'right'
     }"

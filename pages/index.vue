@@ -4,14 +4,14 @@
 
     <section class="section">
       <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-7-widescreen column-title-wrapper">
+        <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
           <h3 class="title is-4 has-text-centered is-uppercase">
             About me
           </h3>
         </div>
       </div>
       <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-7-widescreen">
+        <div class="column is-9-desktop is-6-widescreen">
           <p>
             Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin
             tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb

@@ -1,10 +1,9 @@
 @import "~bulma/sass/utilities/_all";
 
 /**
- * Any overrides for Bulma variables go in this file
+ * Any overrides and extensions for Bulma variables go in this file
  */
 
-// Custom variables go here
 /**
  * Fonts
  */
@@ -24,8 +23,16 @@ $control-height: 2.5em;
  */
 $primary: #3FE0D0;
 
-//@import "../assets/scss/overrides";
-// Import Bulma and Buefy styles
+/**
+ * Column order
+ */
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+
 @import "~bulma/sass/utilities/_all";
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

@@ -1,14 +1,14 @@
 <template>
   <section class="section">
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-7-widescreen column-title-wrapper">
+      <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
         <h3 class="title is-4 has-text-centered is-uppercase">
           Get in contact
         </h3>
       </div>
     </div>
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-7-widescreen">
+      <div class="column is-9-desktop is-6-widescreen">
         <div class="columns is-multiline">
           <div class="column is-one-third">
             <b-field>

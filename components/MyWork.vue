@@ -1,15 +1,15 @@
 <template>
   <section class="section">
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-7-widescreen column-title-wrapper">
+      <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
         <h3 class="title is-4 has-text-centered is-uppercase">
           Most important work
         </h3>
       </div>
     </div>
     <div class="project-wrapper columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-7-widescreen">
-        <div class="columns is-multiline is-variable is-8">
+      <div class="column is-9-desktop is-6-widescreen">
+        <div class="columns is-multiline is-variable is-8 reverse-columns">
           <div class="column is-6">
             <animate-on-visible-wrapper position="left">
               <website>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="project-wrapper columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-7-widescreen">
+      <div class="column is-9-desktop is-6-widescreen">
         <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
             <h5 class="subtitle has-text-grey-light has-text-right">
@@ -68,7 +68,7 @@
               deserunt mollit anim id est laborum.
             </p>
           </div>
-          <div class="column is-narrow has-text-right">
+          <div class="column is-6 has-text-right">
             <animate-on-visible-wrapper position="right">
               <phone>
                 <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot van de Greenlancers-app">
