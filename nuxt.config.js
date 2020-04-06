@@ -25,7 +25,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&family=Source+Code+Pro:wght@200;400;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&family=Source+Code+Pro&display=swap'
       }
     ],
     htmlAttrs: {
@@ -65,18 +65,31 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // Doc: https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-fontawesome'
   ],
   styleResources: {
     scss: [
       './assets/scss/*.scss'
     ]
   },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
+    ]
+  },
   /*
    ** Buefy module configuration
    */
   buefy: {
-    defaultIconPack: 'mdi'
+    defaultIconPack: 'fas',
   },
   /*
   ** Axios module configuration

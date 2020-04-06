@@ -1,38 +1,21 @@
 <template>
   <div id="index-wrapper">
-    <interactive-header/>
+    <interactive-header />
 
-    <section class="section">
-      <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
-          <h3 class="title is-4 has-text-centered is-uppercase">
-            About me
-          </h3>
-        </div>
-      </div>
-      <div class="columns is-multiline is-centered is-desktop">
-        <div class="column is-9-desktop is-6-widescreen">
-          <p>
-            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin
-            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb
-            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als
-            senior programmeur. Hoe kan ik jou helpen?
-          </p>
-        </div>
-      </div>
-    </section>
+    <testimonials />
 
     <my-work />
 
     <skill-set />
 
-    <contact-form/>
+    <contact-form />
   </div>
 </template>
 
 <script>
 
 import InteractiveHeader from '~/components/InteractiveHeader'
+import Testimonials from '~/components/Testimonials'
 import MyWork from '~/components/MyWork'
 import SkillSet from '~/components/SkillSet'
 import ContactForm from '~/components/ContactForm'
@@ -40,6 +23,7 @@ import ContactForm from '~/components/ContactForm'
 export default {
   components: {
     InteractiveHeader,
+    Testimonials,
     MyWork,
     SkillSet,
     ContactForm
@@ -65,44 +49,6 @@ export default {
       top: 0;
       left: 0;
       background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.15) 100%);
-    }
-  }
-
-  .column-title-wrapper {
-
-    position: relative;
-    text-align: center;
-    padding-bottom: 40px;
-    padding-top: 30px;
-
-    &::after {
-      content: '';
-      display: block;
-      width: calc(100% - 40px);
-      height: 1px;
-      left: 20px;
-      top: calc(50% - 10px);
-      background: $grey-lighter;
-      position: absolute;
-      z-index: 1;
-    }
-
-    & h3 {
-      display: inline-block;
-      font-weight: 100 !important;
-      color: $grey-dark;
-      position: relative;
-      padding: 0 30px;
-      background: $white;
-      z-index: 2;
-    }
-  }
-
-  #index-wrapper > section {
-    &:nth-child(2n) {
-      & h3 {
-        background: $white-ter;
-      }
     }
   }
 </style>

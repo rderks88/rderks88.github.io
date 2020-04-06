@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
-        <h3 class="title is-4 has-text-centered is-uppercase">
+      <div class="column is-9-desktop is-6-widescreen">
+        <h3 class="title is-4 has-text-centered">
           Most important work
         </h3>
       </div>
@@ -19,10 +19,7 @@
           </div>
           <div class="column">
             <h5 class="subtitle is-6 has-text-grey-light">
-              <b-icon
-                icon="calendar"
-                custom-size="mdi-18px"
-              />
+              <font-awesome-icon :icon="['fas', 'calendar-check']" />&nbsp;
               2008 - 2019<br><br>
             </h5>
             <h3 class="title is-4 has-text-grey-dark">
@@ -46,12 +43,9 @@
       <div class="column is-9-desktop is-6-widescreen">
         <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
-            <h5 class="subtitle has-text-grey-light has-text-right">
-              2020 - current project
-              <b-icon
-                icon="calendar"
-                custom-size="mdi-18px"
-              />
+            <h5 class="subtitle is-6 has-text-grey-light has-text-right">
+              2020 - current project&nbsp;
+              <font-awesome-icon :icon="['fas', 'calendar-check']" />
               <br><br>
             </h5>
             <h3 class="title is-4 has-text-grey-dark has-text-right">

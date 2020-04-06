@@ -1,15 +1,15 @@
 <template>
   <section class="section">
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
-        <h3 class="title is-4 has-text-centered is-uppercase">
+      <div class="column is-9-desktop is-6-widescreen">
+        <h3 class="title is-4 has-text-centered">
           Skillset
         </h3>
       </div>
     </div>
     <div class="columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
-        <skill-set-tech/>
+        <skill-set-tech />
 
         <div class="columns">
           <div class="column is-6">

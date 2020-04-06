@@ -4,31 +4,40 @@
       <div class="translate-wrapper" :style="{ transform: `translateX(${translate}px)` }">
         <div
           id="left-image"
-          :style="{ backgroundImage: `url(${lookingLeft})`, 'clip-path': `inset(0 0 0 ${percentage}%)` }"
+          :style="{
+            backgroundImage: `url(${lookingLeft})`,
+            'clip-path': 'inset(0 0 0 ' + returnClip(percentage, false) + '%)'
+          }"
         />
         <div
           id="right-image"
-          :style="{ backgroundImage: `url(${lookingRight})`, 'clip-path': `inset(0 ${invertedPercentage}% 0 0)` }"
+          :style="{
+            backgroundImage: `url(${lookingRight})`,
+            'clip-path': 'inset(0 ' + returnClip(percentage, true) + '% 0 0)'
+          }"
         />
       </div>
     </div>
+
     <div class="columns is-centered is-desktop">
       <div class="column is-9-desktop">
         <div class="columns is-5">
           <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(invertedPercentage) }">
-            <h1 class="title is-3 is-spaced has-text-grey-dark is-uppercase">
-              Business
+            <h1 class="title is-3 is-spaced has-text-grey-dark">
+              <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
+              Entrepreneur
             </h1>
             <h2 class="subtitle is-4 has-text-grey">
-              Facilitating development of scalable products to generate business efficiency and revenue.
+              Improving revenue stream by using a highly analytical mindset to connect tech and business.
             </h2>
           </div>
           <div class="column" />
           <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(percentage) }">
-            <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right is-family-code is-uppercase">
-              &#60;code/&#62;
+            <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
+              Coder
+              <font-awesome-icon icon="code" class="fa-xs" />
             </h1>
-            <h2 class="subtitle is-4 has-text-grey has-text-right is-family-code">
+            <h2 class="subtitle is-4 has-text-grey has-text-right">
               Making a difference by building elegant solutions to complex problems.
             </h2>
           </div>
@@ -47,15 +56,15 @@ export default {
     return {
       lookingLeft,
       lookingRight,
-      leftIdle: 35,
-      rightIdle: 65,
+      leftIdle: 36,
+      rightIdle: 64,
       percentage: this.leftIdle,
       invertedPercentage: this.rightIdle,
       oldPercentage: null,
       translate: 0,
       idleTimer: null,
-      leftCrossEyed: 45,
-      rightCrossEyed: 52,
+      leftCrossEyed: 46,
+      rightCrossEyed: 54,
       crossEyedTimer: null
     }
   },
@@ -93,9 +102,10 @@ export default {
       this.idleTimer = null
     },
     checkCrossEyed () {
-      if (this.percentage > this.leftCrossEyed && this.percentage < this.rightCrossEyed) {
+      if (this.percentage >= this.leftCrossEyed && this.percentage <= this.rightCrossEyed) {
         clearTimeout(this.crossEyedTimer)
         this.crossEyedTimer = setTimeout(() => {
+          this.shift(this.leftIdle)
           this.$buefy.toast.open({
             duration: 3000,
             message: 'That just looks silly 😉',
@@ -103,8 +113,7 @@ export default {
             type: 'is-info'
           })
           this.stopCrossEyed()
-          this.shift(this.leftIdle)
-        }, 1500)
+        }, 1250)
       } else {
         this.stopCrossEyed()
       }
@@ -132,9 +141,15 @@ export default {
       this.translate = -1 * (Math.max(-100, Math.min((newPercentage - 50) * 3, 100)))
       this.invertedPercentage = 100 - this.percentage
     },
+    returnClip (percentage, inverted) {
+      if (inverted) {
+        return Math.min(100 - percentage, this.rightIdle)
+      }
+      return Math.max(percentage, this.leftIdle)
+    },
     returnOpacity (percentage) {
       if (percentage < 25) {
-        return 0
+        return 0.2
       }
       if (percentage >= 60) {
         return 1
@@ -148,15 +163,15 @@ export default {
 <style lang="scss">
 
   #interactive-header {
-    min-height: 550px;
-    height: 60vh;
+    min-height: 450px;
+    height: 50vh;
     position: relative;
 
-    & .title{
+    & .title {
       margin-top: 30px;
     }
 
-    & .subtitle{
+    & .subtitle {
       line-height: 1.5;
     }
 
@@ -175,7 +190,7 @@ export default {
         height: 100%;
         width: 100%;
         position: absolute;
-        transition: transform 1s;
+        transition: transform 0.5s ease-out;
 
         & > #left-image,
         & > #right-image {

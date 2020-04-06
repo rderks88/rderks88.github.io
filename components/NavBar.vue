@@ -22,11 +22,11 @@
           Code
         </a>
       </div>-->
-      <div class="navbar-start">
+      <!--<div class="navbar-start">
         <h1 class="title is-4 has-text-white is-marginless upper">
           &nbsp;Rob Derks
         </h1>
-      </div>
+      </div>-->
 
       <div class="navbar-end">
         <div class="navbar-item">
@@ -38,10 +38,7 @@
               :animated="true"
             >
               <a class="button is-primary" href="mailto:hello@robderks.com" target="_top">
-                <b-icon
-                  icon="email"
-                  custom-size="mdi-24px"
-                />
+                <font-awesome-icon :icon="['fas', 'envelope']" />
               </a>
             </b-tooltip>
             <b-tooltip
@@ -51,10 +48,7 @@
               :animated="true"
             >
               <a class="button is-primary" href="https://www.linkedin.com/in/iamrobderks/" target="_blank">
-                <b-icon
-                  icon="linkedin"
-                  custom-size="mdi-24px"
-                />
+                <font-awesome-icon :icon="['fab', 'linkedin-in']" />
               </a>
             </b-tooltip>
           </div>

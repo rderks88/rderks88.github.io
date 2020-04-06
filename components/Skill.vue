@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-mobile" style="margin-bottom: 5px">
     <div class="column">
-      <slot/>
+      <slot />
     </div>
     <div class="column is-narrow">
       <b-tooltip

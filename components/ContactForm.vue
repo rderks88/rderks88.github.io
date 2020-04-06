@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="columns is-multiline is-centered is-desktop">
-      <div class="column is-9-desktop is-6-widescreen column-title-wrapper">
-        <h3 class="title is-4 has-text-centered is-uppercase">
+      <div class="column is-9-desktop is-6-widescreen">
+        <h3 class="title is-4 has-text-centered">
           Get in contact
         </h3>
       </div>
