@@ -1,35 +1,55 @@
 <template>
-  <div class="columns">
-    <div class="column is-6-desktop">
-      <h4 class="title is-4">
-        Technisch
-      </h4>
+  <div class="columns is-multiline is-mobile is-variable is-8">
+    <div class="column is-12">
       <div class="content">
         <p>
-          Fullstack developer: zeer comfortabel in een favoriete set technieken maar sta altijd open voor nieuwe
-          technieken.
+          Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to
+          give an overview of my technical skills. In no way is belowmentioned list exhausting but most important
+          skills are shown. Click on a skill for a more elaborate description.
         </p>
-        <skill :proficiency="4.5">
-          Php
-        </skill>
-        <skill :proficiency="4.5">
-          Laravel
-        </skill>
-        <skill :proficiency="4">
-          Javascript
-        </skill>
-        <skill :proficiency="4">
-          Vue
-        </skill>
-        <skill :proficiency="3.5">
-          Symphony
-        </skill>
-        <skill :proficiency="3">
-          Angular
-        </skill>
       </div>
     </div>
-    <div class="column is-6-desktop">
+    <div class="column is-6">
+      <skill :proficiency="4.5">
+        Php
+      </skill>
+      <skill :proficiency="4.5">
+        Laravel
+      </skill>
+      <skill :proficiency="4">
+        Javascript
+      </skill>
+      <skill :proficiency="4">
+        Vue
+      </skill>
+      <skill :proficiency="3.5">
+        Symphony
+      </skill>
+      <skill :proficiency="3">
+        Angular
+      </skill>
+    </div>
+    <div class="column is-6">
+      <skill :proficiency="4.5">
+        Php
+      </skill>
+      <skill :proficiency="4.5">
+        Laravel
+      </skill>
+      <skill :proficiency="4">
+        Javascript
+      </skill>
+      <skill :proficiency="4">
+        Vue
+      </skill>
+      <skill :proficiency="3.5">
+        Symphony
+      </skill>
+      <skill :proficiency="3">
+        Angular
+      </skill>
+    </div>
+    <div class="column is-12-desktop">
       <animate-on-visible-wrapper position="right">
         <div class="stickers-wrapper">
           <div class="sticker">
@@ -52,7 +72,7 @@
             <docker class="docker-logo" />
             <docker class="docker-logo" />
           </div>
-          <div class="sticker larger">
+          <div class="sticker">
             <git class="git-logo" />
             <git class="git-logo" />
           </div>
@@ -165,24 +185,21 @@ export default {
 
 <style lang="scss">
   .stickers-wrapper {
-    width: 80%;
-    padding-top: 80%;
+    width: 100%;
+    padding-bottom: 25%;
     position: relative;
     margin-bottom: 80px;
-    margin-left:10%;
+
+    $stickerSize: 45%;
 
     & .sticker {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: $stickerSize;
+      height: $stickerSize;
 
       & svg {
-        & path {
-          transform: scale(0.6) translate(5%, 25%);
-        }
-
-        max-width: 52%;
-        max-height: 52%;
+        width: 100%;
+        height: 100%;
       }
 
       & svg:nth-child(1) {
@@ -197,15 +214,15 @@ export default {
         }
       }
 
-      &.larger svg {
-        max-width: 61%;
-        max-height: 61%;
+      /*&.larger svg {
+        max-width: #{ $stickerSize * 1.1 };
+        max-height: #{ $stickerSize * 1.1 };
       }
 
       &.smaller svg {
-        max-width: 47%;
-        max-height: 47%;
-      }
+        max-width: #{ $stickerSize * 0.8 };
+        max-height: #{ $stickerSize * 0.8 };
+      }*/
 
       & svg:nth-child(2) {
         position: absolute;
@@ -219,14 +236,14 @@ export default {
 
       // Chrome
       &:nth-child(2) {
-        top: 68%;
-        left: 18%;
+        top: 12%;
+        left: 10%;
       }
 
       // Composer
       &:nth-child(3) {
         top: 2%;
-        left: -14%;
+        left: -12%;
       }
 
       // Css
@@ -237,22 +254,22 @@ export default {
 
       // Docker
       &:nth-child(5) {
-        top: 10%;
+        top: 15%;
         left: 23%;
         z-index: 2;
       }
 
       // Git
       &:nth-child(6) {
-        top: 80%;
-        left: -4%;
+        top: 55%;
+        left: -2%;
         z-index: 1;
       }
 
       // Github
       &:nth-child(7) {
-        top: 38%;
-        left: 36%;
+        top: 68%;
+        left: 42%;
         z-index: 1;
       }
 
@@ -272,13 +289,13 @@ export default {
       // Laravel
       &:nth-child(10) {
         top: 45%;
-        left: 29%;
+        left: 69%;
       }
 
       // Linux
       &:nth-child(11) {
-        top: 11%;
-        left: 76%;
+        top: 5%;
+        left: 70%;
         z-index: 1;
       }
 
@@ -291,13 +308,13 @@ export default {
       // Nodejs
       &:nth-child(13) {
         top: 4%;
-        left: 27%;
+        left: 77%;
       }
 
       // Php
       &:nth-child(14) {
         top: 50%;
-        left: 54%;
+        left: 44%;
       }
 
       // Phpstorm
@@ -309,19 +326,19 @@ export default {
       // Postgresql
       &:nth-child(16) {
         top: 45%;
-        left: -3%;
+        left: 30%;
       }
 
       // Postman
       &:nth-child(17) {
-        top: 50%;
+        top: 20%;
         left: 54%;
       }
 
       // Stack
       &:nth-child(18) {
-        top: 55%;
-        left: 78%;
+        top: 42%;
+        left: 88%;
       }
 
       // Vue

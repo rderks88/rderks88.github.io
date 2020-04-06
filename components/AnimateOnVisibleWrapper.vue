@@ -1,7 +1,7 @@
 <template>
   <div
     v-observe-visibility="visibilityChanged"
-    class=""
+    class="animate-on-invisible-wrapper"
     :class="{
       'animated delay-250ms fast': isVisible,
       fadeInLeft: isVisible && position === 'left',
@@ -36,3 +36,8 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .animate-on-invisible-wrapper{
+    overflow:hidden;
+  }
+</style>

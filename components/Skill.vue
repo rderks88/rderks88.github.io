@@ -1,14 +1,11 @@
 <template>
-  <div class="columns is-mobile" style="margin-bottom: 5px">
-    <div class="column">
-      <slot />
-    </div>
+  <div class="columns is-gapless is-mobile" style="margin-bottom: 25px">
     <div class="column is-narrow">
       <b-tooltip
         :label="$slots.default[0].text + ': ' + proficiency + '/5'"
         type="is-dark"
         :animated="true"
-        position="is-right"
+        position="is-top"
       >
         <b-progress
           size="is-small"
@@ -18,6 +15,9 @@
           style="width: 130px;"
         />
       </b-tooltip>
+    </div>
+    <div class="column" style="padding-left: 15px !important;">
+      <slot />
     </div>
   </div>
 </template>

@@ -25,7 +25,7 @@
               <div
                 class="avatar"
                 :style="{
-                  backgroundImage: 'url(' + getImgUrl(props.i) + ')'
+                  backgroundImage: `url(${getImg(props.i)})`
                 }"
               />
               <h4 class="title is-5">
@@ -43,6 +43,10 @@
 </template>
 
 <script>
+import Guus from '~/assets/guus.jpg'
+import Kees from '~/assets/kees.jpg'
+import Alex from '~/assets/alex.jpg'
+
 export default {
   data () {
     return {
@@ -50,6 +54,17 @@ export default {
         {
           name: 'Guus Meijer',
           role: 'Co-founder Yubu',
+          img: Guus,
+          content: '\n' +
+            '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
+            '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
+            '            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als\n' +
+            '            senior programmeur. Hoe kan ik jou helpen?'
+        },
+        {
+          name: 'Alex Buis',
+          role: 'CTO We Are Builders',
+          img: Alex,
           content: '\n' +
             '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
             '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
@@ -59,15 +74,7 @@ export default {
         {
           name: 'Kees Meershoek',
           role: 'Co-founder Yubu',
-          content: '\n' +
-            '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
-            '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
-            '            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als\n' +
-            '            senior programmeur. Hoe kan ik jou helpen?'
-        },
-        {
-          name: 'Andria Annandale',
-          role: 'Vriendin',
+          img: Kees,
           content: '\n' +
             '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
             '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
@@ -87,8 +94,8 @@ export default {
     getTestimonial (value) {
       return this.testimonials[value].content
     },
-    getImgUrl (value) {
-      return `https://picsum.photos/id/43${value}/1230/500`
+    getImg (value) {
+      return this.testimonials[value].img
     }
   }
 }
@@ -111,13 +118,13 @@ export default {
       border: solid 6px $white-ter;
       box-shadow: 0 0 0 3px $primary;
       border-radius: 100%;
-      overflow:hidden;
+      overflow: hidden;
       margin-bottom: 15px;
       display: inline-block;
     }
 
     & h4,
-    & h5{
+    & h5 {
       transition: opacity 1s;
       opacity: 0;
     }
@@ -129,7 +136,7 @@ export default {
     transform: scale(1);
 
     & h4,
-    & h5{
+    & h5 {
       opacity: 1;
     }
   }

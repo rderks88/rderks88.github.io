@@ -19,13 +19,36 @@
       </div>
     </div>
 
+    <div
+      id="background-wrapper"
+      class="columns is-centered is-family-code"
+      :style="{ transform: 'translateX(' + 1.5 * translate + 'px)' }"
+    >
+      <div class="column is-5 has-text-right">
+        <p :style="{ opacity: returnOpacity(invertedPercentage) }">
+          <business-svg />
+        </p>
+      </div>
+      <div class="column is-5" style="margin-top: auto;">
+        <p class="has-text-weight-bold" :style="{ opacity: returnOpacity(percentage), overflow: 'hidden'}">
+          <span style="font-size: 1em; margin-left: 70px;">&lt;script></span><br>
+          <span style="font-size: 1.2em; margin-left: -40px;">console.log('Nice to meet you')</span><br>
+          <span style="font-size: 0.8em; margin-left: 30px;">&lt;programmer height="193"</span><br>
+          <span style="font-size: 1.2em; margin-left: 80px;">status="freelancing"</span><br>
+          <span style="font-size: 1em; margin-left: 140px;">value="honesty"</span><br>
+          <span style="font-size: 0.8em; margin-left: 190px;">&lt;/programmer&gt;</span><br>
+          <span style="font-size: 1em; margin-left: 175px;">&lt;/script></span>
+        </p>
+      </div>
+    </div>
+
     <div class="columns is-centered is-desktop">
       <div class="column is-9-desktop">
         <div class="columns is-5">
           <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(invertedPercentage) }">
             <h1 class="title is-3 is-spaced has-text-grey-dark">
               <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
-              Entrepreneur
+              Business savvy
             </h1>
             <h2 class="subtitle is-4 has-text-grey">
               Improving revenue stream by using a highly analytical mindset to connect tech and business.
@@ -50,8 +73,12 @@
 <script>
 import lookingLeft from '~/assets/looking-left.png'
 import lookingRight from '~/assets/looking-right.png'
+import BusinessSvg from '~/assets/business.svg'
 
 export default {
+  components: {
+    BusinessSvg
+  },
   data () {
     return {
       lookingLeft,
@@ -164,8 +191,9 @@ export default {
 
   #interactive-header {
     min-height: 450px;
-    height: 50vh;
+    height: 55vh;
     position: relative;
+    overflow:hidden;
 
     & .title {
       margin-top: 30px;
@@ -204,6 +232,28 @@ export default {
           background-position: center bottom;
           transition: clip-path 1.3s;
         }
+      }
+    }
+
+    & #background-wrapper {
+
+      position: absolute;
+      width:100%;
+      bottom:0;
+      z-index: -1;
+      left: 0;
+      transition: transform 0.5s ease-out;
+
+      & .column{
+        padding: 0 10px;
+      }
+
+      & svg {
+        fill: $grey;
+      }
+
+      & p {
+        transition: opacity 1s;
       }
     }
 

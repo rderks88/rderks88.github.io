@@ -89,7 +89,7 @@ export default {
    ** Buefy module configuration
    */
   buefy: {
-    defaultIconPack: 'fas',
+    defaultIconPack: 'fas'
   },
   /*
   ** Axios module configuration

@@ -13,7 +13,7 @@
    version="1.1"
    id="svg36"
    sodipodi:docname="docker.svg"
-   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+   inkscape:version="0.92.4 (fd57863, 2020-04-02)">
   <metadata
      id="metadata42">
     <rdf:RDF>
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -46,7 +46,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.11238095"
-     inkscape:cx="1250"
+     inkscape:cx="-316.10173"
      inkscape:cy="364.45312"
      inkscape:window-x="67"
      inkscape:window-y="27"
@@ -55,7 +55,7 @@
   <g
      id="g34"
      style="fill:none;fill-rule:evenodd"
-     transform="translate(0,-0.02)">
+     transform="matrix(0.81220523,0,0,0.81220523,23.94928,13.578219)">
     <path
        d="m 147.488,45.732 h 22.866 v 23.375 h 11.561 c 5.34,0 10.831,-0.951 15.887,-2.664 2.485,-0.843 5.273,-2.015 7.724,-3.49 -3.228,-4.214 -4.876,-9.535 -5.36,-14.78 -0.66,-7.135 0.78,-16.421 5.608,-22.005 l 2.404,-2.78 2.864,2.303 c 7.211,5.793 13.276,13.889 14.345,23.118 8.683,-2.554 18.878,-1.95 26.531,2.467 l 3.14,1.812 -1.652,3.226 C 246.933,68.946 233.4,72.86 220.17,72.167 c -19.797,49.309 -62.898,72.653 -115.157,72.653 -27,0 -51.77,-10.093 -65.876,-34.047 l -0.231,-0.39 -2.055,-4.182 C 32.083,95.657 30.499,84.106 31.573,72.564 l 0.323,-3.457 H 51.45 V 45.732 H 74.315 V 22.866 h 45.733 V 0 h 27.44 v 45.732"
        id="path2"
