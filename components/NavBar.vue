@@ -7,7 +7,7 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://www.robderks.com">
+      <a class="navbar-item" href="https://robderks.com">
         <img src="~/assets/logo.png" width="35" height="35" alt="Logo Rob Derks">
       </a>
     </div>

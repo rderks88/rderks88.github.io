@@ -39,7 +39,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '~/assets/scss/_main.scss'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -64,15 +66,8 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    // Doc: https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources',
     'nuxt-fontawesome'
   ],
-  styleResources: {
-    scss: [
-      './assets/scss/*.scss'
-    ]
-  },
   fontawesome: {
     imports: [
       {
@@ -87,9 +82,11 @@ export default {
   },
   /*
    ** Buefy module configuration
+   ** https://buefy.org/documentation/constructor-options
    */
   buefy: {
-    defaultIconPack: 'fas'
+    defaultIconPack: 'fas',
+    css: false
   },
   /*
   ** Axios module configuration

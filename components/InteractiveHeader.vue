@@ -202,6 +202,8 @@ export default {
 
 <style lang="scss">
 
+  @import "~assets/scss/variables";
+
   #interactive-header {
     /*min-height: 450px;*/
     /*height: 55vh;*/

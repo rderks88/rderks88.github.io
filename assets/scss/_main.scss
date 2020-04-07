@@ -1,0 +1,44 @@
+@import "variables";
+
+// Column order
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+
+// Blockquote
+.content blockquote{
+  border-left: 0 !important;
+  padding:1.5em;
+  &:before{
+    content: '\201c';
+    position: absolute;
+    top:0;
+    left:0;
+    color: $primary;
+    font-size: 8em;
+    line-height:  0.8em;
+  }
+  &:after{
+    content: '\201d';
+    position: absolute;
+    bottom:0;
+    right:0;
+    color: $primary;
+    font-size: 8em;
+    line-height: 0em;
+  }
+}
+
+// Custom changes
+$body-color: $grey;
+$control-height: 2.5em;
+
+// Own versions of animations.css
+@import "animations";
+
+// Import custom global css
+@import "../../node_modules/bulma";
+@import "../../node_modules/buefy/src/scss/buefy";

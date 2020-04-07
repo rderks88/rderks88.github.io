@@ -11,6 +11,8 @@
 </template>
 <style lang="scss" scoped>
 
+  @import "~assets/scss/variables";
+
   /* phone */
   #phone {
     width: 310px;
