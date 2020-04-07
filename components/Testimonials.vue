@@ -55,11 +55,7 @@ export default {
           name: 'Guus Meijer',
           role: 'Co-founder Yubu',
           img: Guus,
-          content: '\n' +
-            '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
-            '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
-            '            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als\n' +
-            '            senior programmeur. Hoe kan ik jou helpen?'
+          content: 'Als Productowner was Rob voor mij de ideale (sparring)partner. Rob is een echte allrounder en schakelt moeiteloos tussen concept - UI/UX - frontend & backend. Wat Rob uniek maakt is dat hij naast de technische realisatie ook conceptueel kan meedenken. Hierbij vergeet hij de eindgebruiker & businessdoelstellingen nooit uit het oog. Daarnaast is Rob een zeer prettig persoon om mee samen te werken en kan hij zich moeiteloos aanpassen aan verschillende werkprocessen. Op de tafeltennistafel laat hij zich ook makkelijk verslaan.'
         },
         {
           name: 'Alex Buis',

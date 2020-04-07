@@ -1,6 +1,39 @@
 <template>
-  <section id="interactive-header" class="section">
-    <div class="image-wrapper">
+  <section id="interactive-header" class="section" style="overflow: hidden;">
+    <div class="columns is-centered is-desktop is-marginless">
+      <div class="column is-9-desktop">
+        <div id="title-wrapper" class="columns is-mobile is-5 is-variable">
+          <div
+            class="column is-10-mobile is-5-tablet is-4-widescreen opacity-text"
+            :class="returnOpacityClass(invertedPercentage, true)"
+          >
+            <h1 class="title is-3 is-spaced has-text-grey-dark">
+              <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
+              Business savvy
+            </h1>
+            <h2 class="subtitle is-4 has-text-grey">
+              Improving revenue stream by using a highly analytical mindset to connect tech and business.
+            </h2>
+          </div>
+          <div class="column" />
+          <div
+            id="code-text-column"
+            class="column is-10-mobile is-5-tablet is-4-widescreen opacity-text"
+            :class="returnOpacityClass(percentage, true)"
+          >
+            <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
+              Coder
+              <font-awesome-icon icon="code" class="fa-xs" />
+            </h1>
+            <h2 class="subtitle is-4 has-text-grey has-text-right">
+              Making a difference by building elegant solutions to complex problems.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="image-wrapper">
       <div class="translate-wrapper" :style="{ transform: `translateX(${translate}px)` }">
         <div
           id="left-image"
@@ -21,50 +54,30 @@
 
     <div
       id="background-wrapper"
-      class="columns is-centered is-family-code"
-      :style="{ transform: 'translateX(' + 1.5 * translate + 'px)' }"
+      class="columns is-mobile is-centered tablet is-hidden-mobile"
+      :style="{ transform: 'translateX(' + 0.25 * translate + 'px)' }"
     >
-      <div class="column is-5 has-text-right">
-        <p :style="{ opacity: returnOpacity(invertedPercentage) }">
+      <div
+        class="column is-6 has-text-right"
+        style="overflow: hidden;"
+      >
+        <p :class="returnOpacityClass(invertedPercentage)">
           <business-svg />
         </p>
       </div>
-      <div class="column is-5" style="margin-top: auto;">
-        <p class="has-text-weight-bold" :style="{ opacity: returnOpacity(percentage), overflow: 'hidden'}">
-          <span style="font-size: 1em; margin-left: 70px;">&lt;script></span><br>
-          <span style="font-size: 1.2em; margin-left: -40px;">console.log('Nice to meet you')</span><br>
-          <span style="font-size: 0.8em; margin-left: 30px;">&lt;programmer height="193"</span><br>
-          <span style="font-size: 1.2em; margin-left: 80px;">status="freelancing"</span><br>
-          <span style="font-size: 1em; margin-left: 140px;">value="honesty"</span><br>
-          <span style="font-size: 0.8em; margin-left: 190px;">&lt;/programmer&gt;</span><br>
-          <span style="font-size: 1em; margin-left: 175px;">&lt;/script></span>
+      <div
+        class="column is-6"
+        style="overflow: hidden;"
+      >
+        <p class="has-text-weight-bold is-family-code" :class="returnOpacityClass(percentage)">
+          <span style="font-size: 1em; margin-left: 60px;">&lt;script></span><br>
+          <span style="font-size: 1.2em; margin-left: -10px;">console.log('Nice to meet you')</span><br>
+          <span style="font-size: 0.8em; margin-left: 10px;">&lt;programmer height="193"</span><br>
+          <span style="font-size: 1.2em; margin-left: 70px;">status="freelancing"</span><br>
+          <span style="font-size: 1em; margin-left: 120px;">value="honesty"</span><br>
+          <span style="font-size: 0.8em; margin-left: 160px;">&lt;/programmer&gt;</span><br>
+          <span style="font-size: 1em; margin-left: 165px;">&lt;/script></span>
         </p>
-      </div>
-    </div>
-
-    <div class="columns is-centered is-desktop">
-      <div class="column is-9-desktop">
-        <div class="columns is-5">
-          <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(invertedPercentage) }">
-            <h1 class="title is-3 is-spaced has-text-grey-dark">
-              <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
-              Business savvy
-            </h1>
-            <h2 class="subtitle is-4 has-text-grey">
-              Improving revenue stream by using a highly analytical mindset to connect tech and business.
-            </h2>
-          </div>
-          <div class="column" />
-          <div class="column is-5 opacity-text" :style="{ opacity: returnOpacity(percentage) }">
-            <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
-              Coder
-              <font-awesome-icon icon="code" class="fa-xs" />
-            </h1>
-            <h2 class="subtitle is-4 has-text-grey has-text-right">
-              Making a difference by building elegant solutions to complex problems.
-            </h2>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -83,8 +96,8 @@ export default {
     return {
       lookingLeft,
       lookingRight,
-      leftIdle: 36,
-      rightIdle: 64,
+      leftIdle: 30,
+      rightIdle: 70,
       percentage: this.leftIdle,
       invertedPercentage: this.rightIdle,
       oldPercentage: null,
@@ -174,14 +187,14 @@ export default {
       }
       return Math.max(percentage, this.leftIdle)
     },
-    returnOpacity (percentage) {
-      if (percentage < 25) {
-        return 0.2
+    returnOpacityClass (percentage, invisibleOnMobile) {
+      if (percentage <= this.leftIdle) {
+        return invisibleOnMobile ? 'opacity-off-mobile' : 'opacity-low'
       }
-      if (percentage >= 60) {
-        return 1
+      if (percentage >= this.rightIdle) {
+        return 'opacity-full'
       }
-      return Math.round(percentage) * 0.01
+      return 'opacity-half'
     }
   }
 }
@@ -190,27 +203,66 @@ export default {
 <style lang="scss">
 
   #interactive-header {
-    min-height: 450px;
-    height: 55vh;
+    /*min-height: 450px;*/
+    /*height: 55vh;*/
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
+    padding-bottom: 0;
 
-    & .title {
-      margin-top: 30px;
+    & .opacity-off-mobile{
+      opacity: 0;
+      @include from($tablet) {
+        opacity: 0.2;
+      }
+    }
+
+    & .opacity-low{
+      opacity: 0.2;
+    }
+
+    & .opacity-half{
+      opacity: 0.5;
+    }
+
+    & .opacity-full{
+      opacity: 1;
+    }
+
+    @include from($desktop) {
+      & #title-wrapper {
+        margin-top: 30px;
+      }
+    }
+
+    @include until($tablet) {
+      & #title-wrapper {
+        position: relative;
+      }
+      & #code-text-column {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     }
 
     & .subtitle {
       line-height: 1.5;
     }
 
-    & .image-wrapper {
+    & #image-wrapper {
       z-index: 1;
-      width: 70vw;
-      height: 90%;
-      position: absolute;
+      position: relative;
       left: 50%;
       bottom: 0;
       transform: translateX(-50%);
+
+      @include from($tablet) {
+        width: 60vw;
+        height: 40vw;
+        max-width: 660px;
+        max-height: 440px;
+        margin-top: -240px;
+      }
 
       & > .translate-wrapper {
         top: 0;
@@ -233,19 +285,48 @@ export default {
           transition: clip-path 1.3s;
         }
       }
+
+      @include until($tablet) {
+        width: 700px;
+        height: 700px;
+        max-height: 200px;
+        overflow:hidden;
+
+        & > .translate-wrapper {
+          margin-top:-200px;
+          height: 700px;
+          width: 700px;
+        }
+      }
     }
 
     & #background-wrapper {
 
       position: absolute;
-      width:100%;
-      bottom:0;
+      width: 100%;
+      bottom: 0;
       z-index: -1;
       left: 0;
       transition: transform 0.5s ease-out;
+      margin-bottom: 0;
 
-      & .column{
+      & .column {
         padding: 0 10px;
+        white-space: nowrap;
+        margin-top: auto;
+
+        @include tablet-only {
+          &:nth-child(1){
+            transform: scale(0.7);
+            margin-bottom: -50px;
+            margin-right: -90px;
+          }
+          &:nth-child(2){
+            transform: scale(0.7);
+            margin-bottom: -20px;
+            margin-left: -70px;
+          }
+        }
       }
 
       & svg {
