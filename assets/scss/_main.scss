@@ -1,3 +1,4 @@
+// First we load all the default variables and our own edits of those
 @import "variables";
 
 // Column order
@@ -39,6 +40,8 @@ $control-height: 2.5em;
 // Own versions of animations.css
 @import "animations";
 
-// Import custom global css
+// Import front-end framework
+// We import bulma here because importing it
+// at any other point will not apply our custom vars
 @import "../../node_modules/bulma";
 @import "../../node_modules/buefy/src/scss/buefy";

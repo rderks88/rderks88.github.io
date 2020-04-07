@@ -30,8 +30,6 @@ export default {
 
 <style lang="scss">
 
-  @import "~assets/scss/variables";
-
   #index-wrapper > section {
     position: relative;
 

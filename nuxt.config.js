@@ -44,6 +44,7 @@ export default {
   ],
   /*
   ** Plugins to load before mounting the App
+  ** Within this css we edit the defaults for Buefy
   */
   plugins: [
     '~/plugins/vue-observe-visibility'
@@ -66,8 +67,17 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
     'nuxt-fontawesome'
   ],
+  /*
+  ** This loads the scss variables in all vue components
+  ** This does not yet modify Buefy default variables
+  */
+  styleResources: {
+    scss: ['~/assets/scss/_variables.scss']
+  },
   fontawesome: {
     imports: [
       {
