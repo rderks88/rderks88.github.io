@@ -36,8 +36,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-  .animate-on-invisible-wrapper{
-    overflow:hidden;
-  }
-</style>

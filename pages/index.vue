@@ -32,6 +32,7 @@ export default {
 
   #index-wrapper > section {
     position: relative;
+    overflow:hidden;
 
     // Give every second section a slightly darker background
     &:nth-child(2n) {
