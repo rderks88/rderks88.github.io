@@ -29,11 +29,16 @@
               SaaS solution voor studiekeuze van middelbare scholieren
             </h5>
             <p class="has-text-justified">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.
+              In 2008 I launched the first version of StudieID which, after that company merged with BeInvolved,
+              became to be Yubu in 2012. After a significant market penetration our competitor decided to rather buy us
+              out. After a year long process of handing the company over I closed the chapter. <br>
+              In this 12 year process I learned valuable lessons for every stage of a company. From the early
+              start-up days to the growth fase to eventually your exit.
+              During this project I got to learn from some of the best in the fields. I got code-tutored by `We Are
+              Builders` (a successfull start-up studio from Rotterdam). During our investment rounds
+              and during the selling of my business I got to learn from some experienced
+              investors which gave me insight in some higher level business-strategies.
+              All in all, the time spent working on Yubu made me the business savvy programmer I am today.
             </p>
           </div>
         </div>
