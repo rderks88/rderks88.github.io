@@ -95,8 +95,9 @@ export default {
    ** https://buefy.org/documentation/constructor-options
    */
   buefy: {
+    css: false,
     defaultIconPack: 'fas',
-    css: false
+    materialDesignIconsHRef: 'https://use.fontawesome.com/releases/v5.4.1/css/all.css'
   },
   /*
   ** Axios module configuration

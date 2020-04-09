@@ -17,7 +17,8 @@
                 placeholder="Naam"
                 required
                 size="is-default"
-                icon="account"
+                validation-message="Dit veld is verplicht."
+                icon="user"
                 type="text"
               />
             </b-field>
@@ -42,7 +43,8 @@
                 placeholder="Email"
                 required
                 size="is-default"
-                icon="email"
+                validation-message="Dit veld is verplicht en moet een geldig e-mail adres bevatten."
+                icon="envelope"
                 type="email"
               />
             </b-field>
@@ -53,6 +55,7 @@
                 v-model="comment"
                 placeholder="Comment"
                 size="is-default"
+                validation-message="Dit veld is verplicht."
                 type="textarea"
               />
             </b-field>

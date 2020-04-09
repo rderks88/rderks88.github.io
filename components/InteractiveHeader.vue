@@ -5,7 +5,7 @@
         <div id="title-wrapper" class="columns is-mobile is-5 is-variable">
           <div
             class="column is-10-mobile is-5-tablet is-4-widescreen opacity-text"
-            :class="returnOpacityClass(invertedPercentage, true)"
+            :class="returnOpacityClass(100 - percentage, true)"
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark">
               <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
@@ -22,7 +22,7 @@
             :class="returnOpacityClass(percentage, true)"
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
-              Coder
+              Programmer
               <font-awesome-icon icon="code" class="fa-xs" />
             </h1>
             <h2 class="subtitle is-4 has-text-grey has-text-right">
@@ -61,7 +61,7 @@
         class="column is-6 has-text-right"
         style="overflow: hidden;"
       >
-        <p :class="returnOpacityClass(invertedPercentage)">
+        <p :class="returnOpacityClass(100 - percentage)">
           <business-svg />
         </p>
       </div>
@@ -98,8 +98,8 @@ export default {
       lookingRight,
       leftIdle: 30,
       rightIdle: 70,
-      percentage: this.leftIdle,
-      invertedPercentage: this.rightIdle,
+      percentage: 70,
+      invertedPercentage: 30,
       oldPercentage: null,
       translate: 0,
       idleTimer: null,
@@ -179,7 +179,6 @@ export default {
       this.oldPercentage = newPercentage
       this.percentage = newPercentage
       this.translate = -1 * (Math.max(-100, Math.min((newPercentage - 50) * 3, 100)))
-      this.invertedPercentage = 100 - this.percentage
     },
     returnClip (percentage, inverted) {
       if (inverted) {
@@ -202,14 +201,13 @@ export default {
 
 <style lang="scss">
 
-  @import "~assets/scss/variables";
-
   #interactive-header {
     /*min-height: 450px;*/
     /*height: 55vh;*/
     position: relative;
     overflow: hidden;
     padding-bottom: 0;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(54,184,163,0.05) 100%);
 
     & .opacity-off-mobile{
       opacity: 0;
@@ -289,15 +287,16 @@ export default {
       }
 
       @include until($tablet) {
-        width: 700px;
-        height: 700px;
-        max-height: 200px;
+        width: 500px;
+        height: 500px;
+        max-height: 140px;
         overflow:hidden;
+        margin-top:-20px;
 
         & > .translate-wrapper {
-          margin-top:-200px;
-          height: 700px;
-          width: 700px;
+          margin-top:-140px;
+          height: 500px;
+          width: 500px;
         }
       }
     }

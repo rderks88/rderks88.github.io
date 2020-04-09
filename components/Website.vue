@@ -19,8 +19,6 @@
 </template>
 <style lang="scss" scoped>
 
-  @import "~assets/scss/variables";
-
   /* phone */
   #website {
     background-color: $white-ter;

@@ -99,8 +99,6 @@ export default {
 
 <style lang="scss">
 
-  @import "~assets/scss/variables";
-
   .reference {
     opacity: 0.5;
     text-align: center;
