@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "buttonLanguageTooltip": "Liever Nederlands?"
+  },
+  "home": {
+    "titleProgrammer": "Programmer",
+    "titleBusiness": "Business savvy",
+    "subtitleProgrammer": "Making a difference by building elegant solutions to complex problems.",
+    "subtitleBusiness": "Improving revenue stream by using a highly analytical mindset to connect tech and business."
+  }
+}

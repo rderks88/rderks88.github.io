@@ -9,10 +9,10 @@
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark">
               <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
-              Business savvy
+              {{ $t('home.titleBusiness') }}
             </h1>
             <h2 class="subtitle is-4 has-text-grey">
-              Improving revenue stream by using a highly analytical mindset to connect tech and business.
+              {{ $t('home.subtitleBusiness') }}
             </h2>
           </div>
           <div class="column" />
@@ -22,11 +22,11 @@
             :class="returnOpacityClass(percentage, true)"
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
-              Programmer
+              {{ $t('home.titleProgrammer') }}
               <font-awesome-icon icon="code" class="fa-xs" />
             </h1>
             <h2 class="subtitle is-4 has-text-grey has-text-right">
-              Making a difference by building elegant solutions to complex problems.
+              {{ $t('home.subtitleProgrammer') }}
             </h2>
           </div>
         </div>
@@ -207,8 +207,7 @@ export default {
     position: relative;
     overflow: hidden;
     padding-bottom: 0;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(54,184,163,0.05) 100%);
-
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(192,96,60,0.15) 100%);
     & .opacity-off-mobile{
       opacity: 0;
       @include from($tablet) {

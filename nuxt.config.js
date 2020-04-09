@@ -47,7 +47,8 @@ export default {
   ** Within this css we edit the defaults for Buefy
   */
   plugins: [
-    '~/plugins/vue-observe-visibility'
+    '~/plugins/vue-observe-visibility',
+    '~/plugins/i18n.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -111,6 +112,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['vue-i18n'],
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
 
@@ -124,5 +126,11 @@ export default {
         ]
       })
     }
+  },
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/nl', '/en']
   }
 }

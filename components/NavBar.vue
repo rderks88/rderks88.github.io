@@ -51,6 +51,16 @@
                 <font-awesome-icon :icon="['fab', 'linkedin-in']" />
               </a>
             </b-tooltip>
+            <b-tooltip
+              :label="$t('nav.buttonLanguageTooltip')"
+              position="is-bottom"
+              type="is-dark"
+              :animated="true"
+            >
+              <a class="button is-primary" :href="getLanguageUrl()" target="_top">
+                <font-awesome-icon :icon="['fas', 'language']" />
+              </a>
+            </b-tooltip>
           </div>
         </div>
       </div>
@@ -69,6 +79,16 @@ export default {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       this.isAtTopOfPage = scrollTop < 50
     })
+  },
+  methods: {
+    getLanguageUrl () {
+      const currentUrl = this.$nuxt.$route.path
+      if (this.$store.state.locale === 'nl') {
+        return currentUrl.replace('/nl/', '/en/')
+      } else {
+        return currentUrl.replace('/en/', '/nl/')
+      }
+    }
   }
 }
 </script>
