@@ -3,10 +3,10 @@
     <div class="columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
         <h3 class="title is-4 has-text-centered">
-          I'm Rob Derks
+          {{ $t('testimonials.title') }}
         </h3>
         <h4 class="subtitle is-4 has-text-centered">
-          A business savvy programmer
+          {{ $t('testimonials.subtitle') }}
         </h4>
       </div>
     </div>
@@ -52,30 +52,22 @@ export default {
     return {
       testimonials: [
         {
-          name: 'Guus Meijer',
-          role: 'Co-founder Yubu',
+          name: this.$t('testimonials.guus.name'),
+          role: this.$t('testimonials.guus.role'),
           img: Guus,
-          content: 'Als Productowner was Rob voor mij de ideale (sparring)partner. Rob is een echte allrounder en schakelt moeiteloos tussen concept - UI/UX - frontend & backend. Wat Rob uniek maakt is dat hij naast de technische realisatie ook conceptueel kan meedenken. Hierbij vergeet hij de eindgebruiker & businessdoelstellingen nooit uit het oog. Daarnaast is Rob een zeer prettig persoon om mee samen te werken en kan hij zich moeiteloos aanpassen aan verschillende werkprocessen. Op de tafeltennistafel laat hij zich ook makkelijk verslaan.'
+          content: this.$t('testimonials.guus.content')
         },
         {
-          name: 'Alex Buis',
-          role: 'CTO We Are Builders',
+          name: this.$t('testimonials.alex.name'),
+          role: this.$t('testimonials.alex.role'),
           img: Alex,
-          content: '\n' +
-            '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
-            '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
-            '            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als\n' +
-            '            senior programmeur. Hoe kan ik jou helpen?'
+          content: this.$t('testimonials.alex.content')
         },
         {
-          name: 'Kees Meershoek',
-          role: 'Co-founder Yubu',
+          name: this.$t('testimonials.kees.name'),
+          role: this.$t('testimonials.kees.role'),
           img: Kees,
-          content: '\n' +
-            '            Acht jaar lang heb ik binnen mijn eigen educatieve start-up de rol van CTO vervult, van het prille begin\n' +
-            '            tot effectieve marktpenetratie tot succesvolle verkoop. De ervaring die ik hierin heb\n' +
-            '            opgedaan wil ik delen jou. Laten we samen bouwen aan jouw product. Zet me in als product owner of als\n' +
-            '            senior programmeur. Hoe kan ik jou helpen?'
+          content: this.$t('testimonials.kees.content')
         }
       ]
     }

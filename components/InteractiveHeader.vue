@@ -1,5 +1,6 @@
 <template>
   <section id="interactive-header" class="section" style="overflow: hidden;">
+
     <div class="columns is-centered is-desktop is-marginless">
       <div class="column is-9-desktop">
         <div id="title-wrapper" class="columns is-mobile is-5 is-variable">
@@ -8,7 +9,7 @@
             :class="returnOpacityClass(100 - percentage, true)"
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark">
-              <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs" />
+              <font-awesome-icon :icon="['fas', 'rocket']" class="fa-xs has-text-primary" />
               {{ $t('home.titleBusiness') }}
             </h1>
             <h2 class="subtitle is-4 has-text-grey">
@@ -23,7 +24,7 @@
           >
             <h1 class="title is-3 is-spaced has-text-grey-dark has-text-right">
               {{ $t('home.titleProgrammer') }}
-              <font-awesome-icon icon="code" class="fa-xs" />
+              <font-awesome-icon icon="code" class="fa-xs has-text-primary" />
             </h1>
             <h2 class="subtitle is-4 has-text-grey has-text-right">
               {{ $t('home.subtitleProgrammer') }}
@@ -71,7 +72,7 @@
       >
         <p class="has-text-weight-bold is-family-code" :class="returnOpacityClass(percentage)">
           <span style="font-size: 1em; margin-left: 60px;">&lt;script></span><br>
-          <span style="font-size: 1.2em; margin-left: -10px;">console.log('Nice to meet you')</span><br>
+          <span style="font-size: 1.2em; margin-left: -10px;" class="has-text-primary">console.log('Nice to meet you')</span><br>
           <span style="font-size: 0.8em; margin-left: 10px;">&lt;programmer height="193"</span><br>
           <span style="font-size: 1.2em; margin-left: 70px;">status="freelancing"</span><br>
           <span style="font-size: 1em; margin-left: 120px;">value="honesty"</span><br>
@@ -208,29 +209,6 @@ export default {
     overflow: hidden;
     padding-bottom: 0;
 
-    background: linear-gradient(270deg, rgba(#DF907E,0.2), #ffffff);
-    background-size: 400% 400%;
-
-    @-webkit-keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @-moz-keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-    @keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-
     & .opacity-off-mobile{
       opacity: 0;
       @include from($tablet) {
@@ -328,7 +306,7 @@ export default {
       position: absolute;
       width: 100%;
       bottom: 0;
-      z-index: -1;
+      z-index: 0;
       left: 0;
       transition: transform 0.5s ease-out;
       margin-bottom: 0;

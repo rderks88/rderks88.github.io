@@ -1,11 +1,49 @@
 {
   "nav": {
-    "buttonLanguageTooltip": "Liever Nederlands?"
+    "buttonLanguageTooltip": "Nederlands?"
   },
   "home": {
     "titleProgrammer": "Programmer",
     "titleBusiness": "Business savvy",
     "subtitleProgrammer": "Making a difference by building elegant solutions to complex problems.",
     "subtitleBusiness": "Improving revenue stream by using a highly analytical mindset to connect tech and business."
+  },
+  "testimonials": {
+    "title": "I'm Rob Derks",
+    "subtitle": "A business savvy programmer",
+    "guus": {
+      "name": "Guus Meijer",
+      "role": "Co-founder Yubu",
+      "content": "Als Productowner was Rob voor mij de ideale (sparring)partner. Rob is een echte allrounder en schakelt moeiteloos tussen concept - UI/UX - frontend & backend. Wat Rob uniek maakt is dat hij naast de technische realisatie ook conceptueel kan meedenken. Hierbij vergeet hij de eindgebruiker & businessdoelstellingen nooit uit het oog. Daarnaast is Rob een zeer prettig persoon om mee samen te werken en kan hij zich moeiteloos aanpassen aan verschillende werkprocessen. Op de tafeltennistafel laat hij zich ook makkelijk verslaan."
+    },
+    "kees": {
+      "name": "Kees Meershoek",
+      "role": "Co-founder Yubu",
+      "content": "Kees still needs to hand in his testimonial."
+    },
+    "alex": {
+      "name": "Alex Buis",
+      "role": "CTO We Are Builders",
+      "content": "Alex still needs to hand in his testimonial."
+    }
+  },
+  "myWork": {
+    "title": "Most important work",
+    "yubu": {
+      "date": "2008 - 2019",
+      "title": "SaaS solution for high school student's study choice process",
+      "role": "CTO Yubu",
+      "content": "In 2008 I launched the first version of StudieID which, after that company merged with BeInvolved, became to be Yubu in 2012. After a significant market penetration our competitor decided to rather buy us out. After a year long process of handing the company over I closed the chapter. <br>In this 12 year process I learned valuable lessons for every stage of a company. From the early start-up days to the growth fase to eventually your exit. During this project I got to learn from some of the best in the fields. I got code-tutored by `We Are Builders` (a successfull start-up studio from Rotterdam). During our investment rounds and during the selling of my business I got to learn from some experienced investors which gave me insight in some higher level business-strategies. All in all, the time spent working on Yubu made me the business savvy programmer I am today."
+    },
+    "greenlancers": {
+      "date": "2020 - current project",
+      "title": "NGO to mobilize growing number of freelancers for positive impact on sustainability",
+      "role": "Founder Greenlancers",
+      "content": "I am taking up the challenge to pull my weight in the worlds sustainability struggle. Greenlancers mobilizes the growing number of freelancers worldwide to become nature's army."
+    }
+  },
+  "skillset": {
+    "title": "Technical skillset",
+    "content": "Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to give an overview of my technical skills. In no way is belowmentioned list exhausting but most important skills are shown. Click on a skill for a more elaborate description."
   }
 }
