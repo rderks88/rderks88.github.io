@@ -52,6 +52,20 @@
               </a>
             </b-tooltip>
             <b-tooltip
+              v-if="$i18n.locale === 'en'"
+              to="/nl"
+              :label="$t('nav.buttonLanguageTooltip')"
+              position="is-bottom"
+              type="is-dark"
+              :animated="true"
+            >
+              <a class="button is-primary" :href="getLanguageUrl()" target="_top">
+                <font-awesome-icon :icon="['fas', 'language']" />
+              </a>
+            </b-tooltip>
+            <b-tooltip
+              v-if="$i18n.locale === 'nl'"
+              to="/en"
               :label="$t('nav.buttonLanguageTooltip')"
               position="is-bottom"
               type="is-dark"

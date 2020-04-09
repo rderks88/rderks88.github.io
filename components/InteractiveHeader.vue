@@ -207,7 +207,7 @@ export default {
     position: relative;
     overflow: hidden;
     padding-bottom: 0;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(192,96,60,0.15) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(#36b8a3,0.05) 100%);
     & .opacity-off-mobile{
       opacity: 0;
       @include from($tablet) {
