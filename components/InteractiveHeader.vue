@@ -207,7 +207,30 @@ export default {
     position: relative;
     overflow: hidden;
     padding-bottom: 0;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(#36b8a3,0.05) 100%);
+
+    background: linear-gradient(270deg, rgba(#DF907E,0.2), #ffffff);
+    background-size: 400% 400%;
+
+    @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+
     & .opacity-off-mobile{
       opacity: 0;
       @include from($tablet) {
