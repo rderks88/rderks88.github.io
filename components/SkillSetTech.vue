@@ -113,7 +113,7 @@ export default {
     width: 100%;
     position: relative;
 
-    $stickerSize: 130px;
+    $stickerSize: 110px;
     $stickerSizeDesktop: 90px;
 
     & .sticker {

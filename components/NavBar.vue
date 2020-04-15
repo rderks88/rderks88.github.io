@@ -32,56 +32,17 @@
       </b-navbar-item>
 
       <div class="navbar-end">
-        <div class="buttons">
-          <b-tooltip
-            label="hello@robderks.com"
-            position="is-bottom"
-            type="is-dark"
-            :animated="true"
-          >
-            <a class="button is-primary" href="mailto:hello@robderks.com" target="_top">
-              <font-awesome-icon :icon="['fas', 'envelope']"/>
-            </a>
-          </b-tooltip>
-          <b-tooltip
-            label="LinkedIn"
-            position="is-bottom"
-            type="is-dark"
-            :animated="true"
-          >
-            <a class="button is-primary" href="https://www.linkedin.com/in/iamrobderks/" target="_blank">
-              <font-awesome-icon :icon="['fab', 'linkedin-in']"/>
-            </a>
-          </b-tooltip>
-          <b-tooltip
-            v-if="$i18n.locale === 'en'"
-            :label="$t('nav.buttonLanguageTooltip')"
-            position="is-bottom"
-            type="is-dark"
-            :animated="true"
-          >
-            <a class="button is-primary" href="/nl" target="_top">
-              <font-awesome-icon :icon="['fas', 'language']"/>
-            </a>
-          </b-tooltip>
-          <b-tooltip
-            v-if="$i18n.locale === 'nl'"
-            :label="$t('nav.buttonLanguageTooltip')"
-            position="is-bottom"
-            type="is-dark"
-            :animated="true"
-          >
-            <a class="button is-primary" href="/en" target="_top">
-              <font-awesome-icon :icon="['fas', 'language']"/>
-            </a>
-          </b-tooltip>
-        </div>
+        <social-buttons type="is-primary"></social-buttons>
       </div>
     </div>
   </nav>
 </template>
 <script>
+import SocialButtons from '~/components/SocialButtons'
 export default {
+  components: {
+    SocialButtons
+  },
   data () {
     return {
       isAtTopOfPage: true,

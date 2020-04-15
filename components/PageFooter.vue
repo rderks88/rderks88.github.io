@@ -2,20 +2,24 @@
   <section id="pageFooter" class="section has-background-dark">
     <div class="columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
-        <div class="columns is-multiline is-variable is-8 reverse-columns">
+        <div class="columns is-multiline is-variable is-8">
           <div class="column is-6">
-            <img src="~/assets/logo.png" width="60" height="60" alt="Logo Rob Derks">
-            <br>
-            <br>
-            <br>
-            <h3 class="title is-4 has-text-white-ter">
-              {{ $t('footer.title') }}
-            </h3>
-            <h4 class="subtitle is-5 has-text-grey-light">
-              {{ $t('footer.subtitle') }}
-            </h4>
+            <div class="columns is-multiline is-mobile is-variable">
+              <div class="column is-narrow is-12-tablet">
+                <img src="~/assets/logo.png" width="60" height="60" alt="Logo Rob Derks">
+              </div>
+              <div class="column is-12-tablet">
+                <h3 class="title is-4 has-text-white-ter">
+                  {{ $t('footer.title') }}
+                </h3>
+                <h4 class="subtitle is-5 has-text-grey-light">
+                  {{ $t('footer.subtitle') }}
+                </h4>
+                <social-buttons type="is-dark" tooltipDirection="is-top"></social-buttons>
+              </div>
+            </div>
           </div>
-          <div class="column">
+          <div id="detailsColumn" class="column">
             <h5 class="subtitle is-6 has-text-white-ter">
               Rob Derks projects & Investments BV
             </h5>
@@ -37,3 +41,20 @@
     </div>
   </section>
 </template>
+
+<script>
+import SocialButtons from '~/components/SocialButtons'
+export default {
+  components: {
+    SocialButtons
+  }
+}
+</script>
+
+<style lang="scss">
+  @include mobile {
+    #detailsColumn {
+      margin-top: 20px;
+    }
+  }
+</style>
