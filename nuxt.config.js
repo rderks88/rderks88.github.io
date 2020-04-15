@@ -1,5 +1,10 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
+  env: {
+    isLocal: process.env.IS_LOCAL
+  },
   /*
   ** Headers of the page
   */
@@ -48,6 +53,7 @@ export default {
   */
   plugins: [
     '~/plugins/vue-observe-visibility',
+    '~/plugins/vue2-smooth-scroll',
     '~/plugins/i18n.js'
   ],
   /*
@@ -55,7 +61,9 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules
@@ -66,8 +74,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     'nuxt-fontawesome'

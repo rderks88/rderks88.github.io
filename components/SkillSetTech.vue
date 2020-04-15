@@ -3,139 +3,30 @@
     <div class="column is-12">
       <div class="content">
         <p>
-          Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to
-          give an overview of my technical skills. In no way is belowmentioned list exhausting but most important
-          skills are shown. Click on a skill for a more elaborate description.
+          {{ $t('skillset.content') }}
         </p>
       </div>
     </div>
-    <div class="column is-6">
-      <skill :proficiency="4.5">
-        Php
-      </skill>
-      <skill :proficiency="4.5">
-        Laravel
-      </skill>
-      <skill :proficiency="4">
-        Javascript
-      </skill>
-      <skill :proficiency="4">
-        Vue
-      </skill>
-      <skill :proficiency="3.5">
-        Symphony
-      </skill>
-      <skill :proficiency="3">
-        Angular
-      </skill>
-    </div>
-    <div class="column is-6">
-      <skill :proficiency="4.5">
-        Php
-      </skill>
-      <skill :proficiency="4.5">
-        Laravel
-      </skill>
-      <skill :proficiency="4">
-        Javascript
-      </skill>
-      <skill :proficiency="4">
-        Vue
-      </skill>
-      <skill :proficiency="3.5">
-        Symphony
-      </skill>
-      <skill :proficiency="3">
-        Angular
-      </skill>
-    </div>
     <div class="column is-12-desktop">
-      <animate-on-visible-wrapper position="right">
-        <div class="stickers-wrapper">
-          <div class="sticker">
-            <android class="android-logo" />
-            <android class="android-logo" />
-          </div>
-          <div class="sticker">
-            <chrome class="chrome-logo" />
-            <chrome class="chrome-logo" />
-          </div>
-          <div class="sticker larger">
-            <composer class="composer-logo" />
-            <composer class="composer-logo" />
-          </div>
-          <div class="sticker">
-            <css class="css-logo" />
-            <css class="css-logo" />
-          </div>
-          <div class="sticker larger">
-            <docker class="docker-logo" />
-            <docker class="docker-logo" />
-          </div>
-          <div class="sticker">
-            <git class="git-logo" />
-            <git class="git-logo" />
-          </div>
-          <div class="sticker larger">
-            <github class="github-logo" />
-            <github class="github-logo" />
-          </div>
-          <div class="sticker">
-            <html5 class="html5-logo" />
-            <html5 class="html5-logo" />
-          </div>
-          <div class="sticker smaller">
-            <javascript class="javascript-logo" />
-            <javascript class="javascript-logo" />
-          </div>
-          <div class="sticker smaller">
-            <laravel class="laravel-logo" />
-            <laravel class="laravel-logo" />
-          </div>
-          <div class="sticker ">
-            <linux class="linux-logo" />
-            <linux class="linux-logo" />
-          </div>
-          <div class="sticker">
-            <mysql class="mysql-logo" />
-            <mysql class="mysql-logo" />
-          </div>
-          <div class="sticker smaller">
-            <nodejs class="nodejs-logo" />
-            <nodejs class="nodejs-logo" />
-          </div>
-          <div class="sticker">
-            <php class="php-logo" />
-            <php class="php-logo" />
-          </div>
-          <div class="sticker smaller">
-            <phpstorm class="phpstorm-logo" />
-            <phpstorm class="phpstorm-logo" />
-          </div>
-          <div class="sticker smaller">
-            <postgresql class="postgresql-logo" />
-            <postgresql class="postgresql-logo" />
-          </div>
-          <div class="sticker">
-            <postman class="postman-logo" />
-            <postman class="postman-logo" />
-          </div>
-          <div class="sticker">
-            <stack class="stack-logo" />
-            <stack class="stack-logo" />
-          </div>
-          <div class="sticker">
-            <vue class="vue-logo" />
-            <vue class="vue-logo" />
-          </div>
+      <div class="columns is-mobile is-gapless stickers-wrapper is-multiline">
+        <div v-for="(skill, i) in skills" :key="i" class="column is-4-mobile is-3-tablet is-2-desktop">
+          <b-tooltip
+            :label="skill"
+            position="is-bottom"
+            type="is-dark"
+            :animated="true"
+          >
+            <div class="sticker" @click="showMoreInfo(skill)">
+              <component :is="skill" :class="skill + '-logo'" />
+              <component :is="skill" :class="skill + '-logo'" />
+            </div>
+          </b-tooltip>
         </div>
-      </animate-on-visible-wrapper>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import AnimateOnVisibleWrapper from '~/components/AnimateOnVisibleWrapper'
-import Skill from '~/components/Skill'
 import Android from '~/assets/logos/android.svg'
 import Chrome from '~/assets/logos/chrome.svg'
 import Composer from '~/assets/logos/composer.svg'
@@ -158,8 +49,6 @@ import Vue from '~/assets/logos/vue-js.svg'
 
 export default {
   components: {
-    AnimateOnVisibleWrapper,
-    Skill,
     Android,
     Chrome,
     Composer,
@@ -179,6 +68,42 @@ export default {
     Postman,
     Stack,
     Vue
+  },
+
+  data () {
+    return {
+      skills: [
+        'Android',
+        'Chrome',
+        'Composer',
+        'Css',
+        'Docker',
+        'Git',
+        'Github',
+        'Html5',
+        'Javascript',
+        'Laravel',
+        'Linux',
+        'Mysql',
+        'Nodejs',
+        'Php',
+        'Phpstorm',
+        'Postgresql',
+        'Postman',
+        'Stack',
+        'Vue'
+      ]
+    }
+  },
+
+  methods: {
+    showMoreInfo (skill) {
+      this.$buefy.dialog.alert({
+        title: this.$t('skillset.skills.' + skill.toLowerCase() + '.name'),
+        message: this.$t('skillset.skills.' + skill.toLowerCase() + '.description'),
+        confirmText: 'Cool!'
+      })
+    }
   }
 }
 </script>
@@ -186,20 +111,27 @@ export default {
 <style lang="scss">
   .stickers-wrapper {
     width: 100%;
-    padding-bottom: 25%;
     position: relative;
-    margin-bottom: 80px;
 
-    $stickerSize: 45%;
+    $stickerSize: 130px;
+    $stickerSizeDesktop: 90px;
 
     & .sticker {
-      position: absolute;
+      position: relative;
       width: $stickerSize;
       height: $stickerSize;
+
+      @include desktop {
+        width: $stickerSizeDesktop;
+        height: $stickerSizeDesktop;
+      }
+
+      transition: transform 0.5s;
 
       & svg {
         width: 100%;
         height: 100%;
+        transition: filter 0.5s;
       }
 
       & svg:nth-child(1) {
@@ -214,154 +146,18 @@ export default {
         }
       }
 
-      /*&.larger svg {
-        max-width: #{ $stickerSize * 1.1 };
-        max-height: #{ $stickerSize * 1.1 };
+      &:hover {
+        transform: scale(1.1) rotate(3deg);
+        cursor: pointer;
+
+        & svg:nth-child(1) {
+          filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, .3));
+        }
       }
 
-      &.smaller svg {
-        max-width: #{ $stickerSize * 0.8 };
-        max-height: #{ $stickerSize * 0.8 };
-      }*/
-
+      //make sure the 2nd instance of the svg is positioned the same as the first
       & svg:nth-child(2) {
         position: absolute;
-      }
-
-      // Android
-      &:nth-child(1) {
-        top: -5%;
-        left: 9%;
-      }
-
-      // Chrome
-      &:nth-child(2) {
-        top: 12%;
-        left: 10%;
-      }
-
-      // Composer
-      &:nth-child(3) {
-        top: 2%;
-        left: -12%;
-      }
-
-      // Css
-      &:nth-child(4) {
-        top: 24%;
-        left: 6%;
-      }
-
-      // Docker
-      &:nth-child(5) {
-        top: 15%;
-        left: 23%;
-        z-index: 2;
-      }
-
-      // Git
-      &:nth-child(6) {
-        top: 55%;
-        left: -2%;
-        z-index: 1;
-      }
-
-      // Github
-      &:nth-child(7) {
-        top: 68%;
-        left: 42%;
-        z-index: 1;
-      }
-
-      // Html5
-      &:nth-child(8) {
-        top: 60%;
-        left: 50%;
-        z-index: 1;
-      }
-
-      // Javascript
-      &:nth-child(9) {
-        top: 3%;
-        left: 54%;
-      }
-
-      // Laravel
-      &:nth-child(10) {
-        top: 45%;
-        left: 69%;
-      }
-
-      // Linux
-      &:nth-child(11) {
-        top: 5%;
-        left: 70%;
-        z-index: 1;
-      }
-
-      // Mysql
-      &:nth-child(12) {
-        top: -12%;
-        left: 29%;
-      }
-
-      // Nodejs
-      &:nth-child(13) {
-        top: 4%;
-        left: 77%;
-      }
-
-      // Php
-      &:nth-child(14) {
-        top: 50%;
-        left: 44%;
-      }
-
-      // Phpstorm
-      &:nth-child(15) {
-        top: 45%;
-        left: 65%;
-      }
-
-      // Postgresql
-      &:nth-child(16) {
-        top: 45%;
-        left: 30%;
-      }
-
-      // Postman
-      &:nth-child(17) {
-        top: 20%;
-        left: 54%;
-      }
-
-      // Stack
-      &:nth-child(18) {
-        top: 42%;
-        left: 88%;
-      }
-
-      // Vue
-      &:nth-child(19) {
-        top: 1%;
-        left: 59%;
-      }
-
-      //seemingly random rotate
-      &:nth-child(2n) {
-        transform: rotate(-8deg);
-      }
-
-      &:nth-child(3n) {
-        transform: rotate(8deg);
-      }
-
-      &:nth-child(7n) {
-        transform: rotate(15deg);
-      }
-
-      &:nth-child(9n) {
-        transform: rotate(-15deg);
       }
     }
   }

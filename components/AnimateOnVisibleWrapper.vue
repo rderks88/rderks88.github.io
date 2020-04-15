@@ -1,6 +1,9 @@
 <template>
   <div
-    v-observe-visibility="visibilityChanged"
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      once: true
+    }"
     class="animate-on-invisible-wrapper"
     :class="{
       'animated delay-250ms fast': isVisible,
@@ -8,7 +11,7 @@
       fadeInRight: isVisible && position === 'right'
     }"
   >
-    <slot name="default" />
+    <slot name="default"/>
   </div>
 </template>
 <script>

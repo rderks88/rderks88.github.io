@@ -5,6 +5,7 @@
     <my-work />
     <skill-set />
     <contact-form />
+    <page-footer />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import Testimonials from '~/components/Testimonials'
 import MyWork from '~/components/MyWork'
 import SkillSet from '~/components/SkillSet'
 import ContactForm from '~/components/ContactForm'
+import PageFooter from '~/components/PageFooter'
 
 export default {
   components: {
@@ -22,7 +24,8 @@ export default {
     Testimonials,
     MyWork,
     SkillSet,
-    ContactForm
+    ContactForm,
+    PageFooter
   }
 }
 

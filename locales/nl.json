@@ -6,7 +6,9 @@
     "titleProgrammer": "Programmeur",
     "titleBusiness": "Zakelijk inzicht",
     "subtitleProgrammer": "Maak het verschil door het bouwen van elegante oplossingen voor complexe problemen.",
-    "subtitleBusiness": "Efficientie door middel van een hoog analytisch vermogen en de combinatie van technologie en bedrijfsperspectief."
+    "subtitleBusiness": "Efficientie door middel van een hoog analytisch vermogen en de combinatie van technologie en bedrijfsperspectief.",
+    "buttonProgrammer": "Hire me",
+    "buttonBusiness": "Hire me"
   },
   "testimonials": {
     "title": "Ik ben Rob Derks",
@@ -14,7 +16,7 @@
     "guus": {
       "name": "Guus Meijer",
       "role": "Co-founder Yubu",
-      "content": "Als Productowner was Rob voor mij de ideale (sparring)partner. Rob is een echte allrounder en schakelt moeiteloos tussen concept - UI/UX - frontend & backend. Wat Rob uniek maakt is dat hij naast de technische realisatie ook conceptueel kan meedenken. Hierbij vergeet hij de eindgebruiker & businessdoelstellingen nooit uit het oog. Daarnaast is Rob een zeer prettig persoon om mee samen te werken en kan hij zich moeiteloos aanpassen aan verschillende werkprocessen. Op de tafeltennistafel laat hij zich ook makkelijk verslaan."
+      "content": "Als Productowner was Rob voor mij de ideale (sparring)partner. Rob is een echte allrounder en schakelt moeiteloos tussen concept - UI/UX - frontend & backend. Wat Rob uniek maakt is dat hij naast de technische realisatie ook conceptueel kan meedenken. Hierbij vergeet hij de eindgebruiker & businessdoelstellingen nooit uit het oog. Daarnaast is Rob een zeer prettig persoon om mee samen te werken en kan hij zich moeiteloos aanpassen aan verschillende werkprocessen."
     },
     "kees": {
       "name": "Kees Meershoek",
@@ -28,7 +30,8 @@
     }
   },
   "myWork": {
-    "title": "Belangrijkste werkzaamheden",
+    "title": "Het verschil maken",
+    "subtitle": "Dat is de rode draad in mijn werk",
     "yubu": {
       "date": "2008 - 2019",
       "title": "SaaS voor studiekeuze van middelbare scholieren",
@@ -43,7 +46,115 @@
     }
   },
   "skillset": {
-    "title": "Technische skills",
-    "content": "Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to give an overview of my technical skills. In no way is belowmentioned list exhausting but most important skills are shown. Click on a skill for a more elaborate description."
+    "title": "Maar... maar... hoe dan?",
+    "subtitle": "Een kort overzicht van software en technische skills",
+    "content": "Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to give an overview of my technical skills. In no way is belowmentioned list exhausting but most important skills are shown. Click on a skill for a more elaborate description.",
+    "skills": {
+      "android":  {
+        "name": "Android",
+        "description": "If you ask me... Apple or Google? You will get a definite answer in a split second. To each his own, but for me it's Google."
+      },
+      "chrome":  {
+        "name": "Chrome",
+        "description": "Simply can't live without it. Dev tools is essential for most developers."
+      },
+      "composer":  {
+        "name": "Composer",
+        "description": "Simply can't live without it. Composer looks after all of my php-packages for me."
+      },
+      "css":  {
+        "name": "Css",
+        "description": "When it comes to CSS I like to write CSS-only components. I find it a challenge to keep things as clean and lightweight as possible."
+      },
+      "docker":  {
+        "name": "Docker",
+        "description": "With Docker you can run projects on your local machine almost identical to what you actually host in the web. This way 'it works on my machine so it should work' almost becomes a reasonable thing to say."
+      },
+      "git":  {
+        "name": "Git",
+        "description": "In programming it's important to realise the immense amount of work others have done to make possible what we build now. Let us thank Linus Torvalds for creating GIT."
+      },
+      "github":  {
+        "name": "Github",
+        "description": "My choice at this moment when it comes down to version control for my personal projects. I love how GitHub works together with the deployment service 'Travis'."
+      },
+      "html5":  {
+        "name": "Html5",
+        "description": "Writing readable and understandable code is important, and html5 simplifies that. No reason not to love it."
+      },
+      "javascript":  {
+        "name": "Javascript",
+        "description": "The web wouldn't exist without it nowadays. My framework of choice is Vue. Though I also like to explore other frameworks from time to time."
+      },
+      "laravel":  {
+        "name": "Laravel",
+        "description": "Simple yet effective back-end framework based on PHP. I have worked with it for 5+ years now and loved every minute of it. "
+      },
+      "linux":  {
+        "name": "Linux",
+        "description": "This is my operation system of choice. You can say it's better, or faster, or more flexible... It just comes down to 'more fun' then windows."
+      },
+      "mysql":  {
+        "name": "Mysql",
+        "description": "Even though I would never use MySQL in a new project anymore, but plenty existing projects are still run by MySQL. If you consider that you learn from making mistakes... I've learnt basically everything about MySQL."
+      },
+      "nodejs":  {
+        "name": "Nodejs",
+        "description": "What is there to say... Can't live without it. Node does the heavy javscript lifting."
+      },
+      "php":  {
+        "name": "Php",
+        "description": "You either love this back-end programming language or you hate it. After more then 15 years of getting to know all of it's little quirks and strange behaviours sometimes you can guess which side I am on. My favorite framework is Laravel but I do like to explore other frameworks from time to time."
+      },
+      "phpstorm":  {
+        "name": "Phpstorm",
+        "description": "PhpStorm has been my IDE for years and it does not keep many secrets for me."
+      },
+      "postgresql":  {
+        "name": "Postgresql",
+        "description": "MySQL used to be my weapon of choice because the strictness that comes with Postgres did not appeal to me at first. Now I would not want anything else."
+      },
+      "postman":  {
+        "name": "Postman",
+        "description": "Can not work without Postman when developing and testing API's. It has saved me important hours in the past and will continue to do so."
+      },
+      "stack":  {
+        "name": "Stack",
+        "description": "What to say about stack-overflow. Whenever SO is down, I rather go get myself a cup of coffee. Or two..."
+      },
+      "vue":  {
+        "name": "Vue",
+        "description": "Vue is a front-end framework that works really well with Laravel. Worked with it most of my time at Yubu which means I have 5+ years of experience with it."
+      }
+    }
+  },
+  "contactForm": {
+    "title": "Pop me a message",
+    "subtitle": "And hire me for your next project...",
+    "placeholders": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "comment": "Your message"
+    },
+    "validation": {
+      "name": "My name is Rob, what's yours?",
+      "phone": "Let's chat. Please fill in your phone number.",
+      "email": "Mine is hello@robderks.com. What's yours?",
+      "invalidEmail": "This email does not seem legit, please double-check.",
+      "comment": "What can I help you with?",
+      "toast": "Please solve the errors."
+    },
+    "fallBackAlert": {
+      "title":"Error",
+      "message":"Something unexpected went wrong. Please send an email directly to hello@robderks.com.",
+      "confirmText":"Ok"
+    },
+    "submit": "Send message",
+    "thanks": {
+      "title": "Thank you for reaching out. We'll be in contact soon.",
+      "subtitle": "@RobDerks",
+      "disclaimer": "Your personal data will be handled carefully and will not be shared with anyone."
+    }
   }
 }

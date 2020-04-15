@@ -1,6 +1,5 @@
 <template>
   <section id="interactive-header" class="section" style="overflow: hidden;">
-
     <div class="columns is-centered is-desktop is-marginless">
       <div class="column is-9-desktop">
         <div id="title-wrapper" class="columns is-mobile is-5 is-variable">
@@ -15,6 +14,18 @@
             <h2 class="subtitle is-4 has-text-grey">
               {{ $t('home.subtitleBusiness') }}
             </h2>
+            <b-button
+              v-smooth-scroll
+              tag="a"
+              href="#testimonials"
+              target="_self"
+              type="is-primary"
+              outlined
+              class="call-to-action is-relative"
+            >
+              <font-awesome-icon :icon="['fas', 'arrow-alt-circle-down']" class="fa-xs" />&nbsp;
+              {{ $t('home.buttonBusiness') }}
+            </b-button>
           </div>
           <div class="column" />
           <div
@@ -29,6 +40,18 @@
             <h2 class="subtitle is-4 has-text-grey has-text-right">
               {{ $t('home.subtitleProgrammer') }}
             </h2>
+            <b-button
+              v-smooth-scroll
+              tag="a"
+              href="#contactForm"
+              target="_self"
+              type="is-primary"
+              outlined
+              class="call-to-action is-pulled-right is-relative"
+            >
+              <font-awesome-icon :icon="['fas', 'comment-alt']" class="fa-xs" />&nbsp;
+              {{ $t('home.buttonProgrammer') }}
+            </b-button>
           </div>
         </div>
       </div>
@@ -106,7 +129,9 @@ export default {
       idleTimer: null,
       leftCrossEyed: 46,
       rightCrossEyed: 54,
-      crossEyedTimer: null
+      crossEyedTimer: null,
+      timesSeenProgrammer: 0,
+      timesSeenBusiness: 0
     }
   },
   mounted () {
@@ -175,8 +200,15 @@ export default {
       }
     },
     shift (newPercentage) {
+      // track how often both sides are "seen" for button visibility
+      if (newPercentage >= this.rightIdle && this.oldPercentage < this.rightIdle) {
+        this.timesSeenProgrammer += 1
+      } else if (newPercentage <= this.leftIdle && this.oldPercentage > this.leftIdle) {
+        this.timesSeenBusiness += 1
+      }
+
+      // set new percentages
       newPercentage = Math.round(newPercentage)
-      // console.log('percentage:', newPercentage)
       this.oldPercentage = newPercentage
       this.percentage = newPercentage
       this.translate = -1 * (Math.max(-100, Math.min((newPercentage - 50) * 3, 100)))
@@ -228,6 +260,12 @@ export default {
       opacity: 1;
     }
 
+    & .title,
+    & .subtitle {
+      position:relative;
+      z-index: -4;
+    }
+
     @include from($desktop) {
       & #title-wrapper {
         margin-top: 30px;
@@ -251,6 +289,7 @@ export default {
 
     & #image-wrapper {
       z-index: 1;
+      pointer-events: none;
       position: relative;
       left: 50%;
       bottom: 0;
@@ -282,7 +321,7 @@ export default {
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center bottom;
-          transition: clip-path 1.3s;
+          transition: clip-path 0.8s;
         }
       }
 
@@ -303,6 +342,7 @@ export default {
 
     & #background-wrapper {
 
+      pointer-events: none;
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -342,7 +382,10 @@ export default {
     & .opacity-text {
       transition: opacity 1s;
     }
+  }
 
+  .call-to-action{
+    z-index: 100;
   }
 
 </style>

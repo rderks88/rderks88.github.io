@@ -1,10 +1,16 @@
 <template>
-  <section class="section">
+  <section
+    id="myWork"
+    class="section"
+  >
     <div class="columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
         <h3 class="title is-4 has-text-centered">
-          Most important work
+          {{ $t('myWork.title') }}
         </h3>
+        <h4 class="subtitle is-5 has-text-centered">
+          {{ $t('myWork.subtitle') }}
+        </h4>
       </div>
     </div>
     <div class="project-wrapper columns is-multiline is-centered is-desktop">
@@ -13,7 +19,7 @@
           <div class="column is-6">
             <animate-on-visible-wrapper position="left">
               <website>
-                <img src="~/assets/screencapture-yubu.png" alt="Screenshot van de Yubu-website">
+                <img src="~/assets/screencapture-yubu.png" alt="Screenshot Yubu-website">
               </website>
             </animate-on-visible-wrapper>
           </div>
@@ -25,9 +31,9 @@
             <h3 class="title is-4 has-text-grey-dark">
               {{ $t('myWork.yubu.role') }}
             </h3>
-            <h5 class="subtitle is-5 has-text-grey-dark">
+            <h4 class="subtitle is-5 has-text-grey-dark">
               {{ $t('myWork.yubu.title') }}
-            </h5>
+            </h4>
             <p class="has-text-justified" v-html="$t('myWork.yubu.content')" />
           </div>
         </div>
@@ -45,15 +51,15 @@
             <h3 class="title is-4 has-text-grey-dark has-text-right">
               {{ $t('myWork.greenlancers.role') }}
             </h3>
-            <h5 class="subtitle is-5 has-text-grey-dark has-text-right">
+            <h4 class="subtitle is-5 has-text-grey-dark has-text-right">
               {{ $t('myWork.greenlancers.title') }}
-            </h5>
+            </h4>
             <p class="has-text-justified" v-html="$t('myWork.greenlancers.content')" />
           </div>
           <div class="column is-6 has-text-right">
             <animate-on-visible-wrapper position="right">
               <phone>
-                <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot van de Greenlancers-app">
+                <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot Greenlancers-app">
               </phone>
             </animate-on-visible-wrapper>
           </div>

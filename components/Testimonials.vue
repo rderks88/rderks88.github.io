@@ -1,11 +1,14 @@
 <template>
-  <section class="section">
+  <section
+    id="testimonials"
+    class="section"
+  >
     <div class="columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
         <h3 class="title is-4 has-text-centered">
           {{ $t('testimonials.title') }}
         </h3>
-        <h4 class="subtitle is-4 has-text-centered">
+        <h4 class="subtitle is-5 has-text-centered">
           {{ $t('testimonials.subtitle') }}
         </h4>
       </div>
@@ -15,7 +18,7 @@
         <b-carousel :indicator-inside="false" :arrow="false" pause-text="Paused" pause-info-type="is-info">
           <b-carousel-item v-for="(item, i) in testimonials" :key="i">
             <div class="content">
-              <blockquote class="has-text-centered">
+              <blockquote class="has-text-centered testimonial-content">
                 {{ getTestimonial(i) }}
               </blockquote>
             </div>
@@ -128,5 +131,12 @@ export default {
     & h5 {
       opacity: 1;
     }
+  }
+
+  .testimonial-content{
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

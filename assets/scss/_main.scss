@@ -37,6 +37,12 @@
 $body-color: $grey;
 $control-height: 2.5em;
 
+$navbar-item-active-background-color: none;
+$navbar-item-active-color: $white;
+$navbar-item-hover-background-color: none;
+$navbar-item-hover-color: $white;
+$navbar-item-color: rgba($white,0.5);
+
 // Own versions of animations.css
 @import "animations";
 
