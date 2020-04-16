@@ -59,7 +59,7 @@
           <div class="column is-6 has-text-right">
             <animate-on-visible-wrapper position="right">
               <phone>
-                <img src="~/assets/screencapture-greenlancers.png" alt="Screenshot Greenlancers-app">
+                <img src="~/assets/screencapture-greenlancers.jpg" alt="Screenshot Greenlancers-app">
               </phone>
             </animate-on-visible-wrapper>
           </div>

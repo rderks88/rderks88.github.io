@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav-bar />
+    <div id="top" />
     <div id="app">
       <nuxt />
     </div>

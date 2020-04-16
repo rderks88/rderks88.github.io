@@ -73,25 +73,24 @@ export default {
   data () {
     return {
       skills: [
-        'Android',
+        'Phpstorm',
         'Chrome',
-        'Composer',
-        'Css',
-        'Docker',
+        'Php',
+        'Laravel',
+        'Javascript',
+        'Vue',
         'Git',
         'Github',
+        'Docker',
+        'Composer',
+        'Nodejs',
         'Html5',
-        'Javascript',
-        'Laravel',
+        'Css',
         'Linux',
         'Mysql',
-        'Nodejs',
-        'Php',
-        'Phpstorm',
         'Postgresql',
         'Postman',
-        'Stack',
-        'Vue'
+        'Stack'
       ]
     }
   },
@@ -99,8 +98,9 @@ export default {
   methods: {
     showMoreInfo (skill) {
       this.$buefy.dialog.alert({
-        title: this.$t('skillset.skills.' + skill.toLowerCase() + '.name'),
-        message: this.$t('skillset.skills.' + skill.toLowerCase() + '.description'),
+        title: this.$t('skillset.skills.' + skill.toLowerCase() + '.title'),
+        message: '<b>= ' + this.$t('skillset.skills.' + skill.toLowerCase() + '.subtitle') + '</b><br>' +
+          this.$t('skillset.skills.' + skill.toLowerCase() + '.description'),
         confirmText: 'Cool!'
       })
     }

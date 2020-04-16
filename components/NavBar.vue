@@ -1,9 +1,35 @@
 <template>
-  <b-navbar :fixed-top="true" type="is-primary" :spaced="isAtTopOfPage" :mobile-burger="true">
+  <b-navbar
+    ref="dropdown"
+    :fixed-top="true"
+    type="is-primary"
+    :spaced="isAtTopOfPage"
+    :mobile-burger="true"
+  >
     <template slot="brand">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
+      <b-navbar-item
+        v-smooth-scroll
+        href="#top"
+        @click="setActiveSection(null)"
+      >
         <img src="~/assets/logo.png" width="35" height="35" alt="Logo Rob Derks">
       </b-navbar-item>
+      <a
+        id="back-to-top"
+        v-smooth-scroll
+        href="#top"
+        :class="{visible: !isAtTopOfPage}"
+        @click="setActiveSection(null)"
+      >
+        <b-tooltip
+          :label="$t('backToTop.anchor')"
+          position="is-left"
+          type="is-dark"
+          :animated="true"
+        >
+          <font-awesome-icon :icon="['fas', 'arrow-alt-circle-up']" class="is-primary fa-3x" />
+        </b-tooltip>
+      </a>
     </template>
     <template slot="start">
       <b-navbar-item
@@ -12,7 +38,7 @@
         v-smooth-scroll
         :href="'#' + sectionId"
         :class="{'is-active-custom': activeSection === sectionId}"
-        @click="activeSection = sectionId"
+        @click="setActiveSection(sectionId)"
       >
         <b-tooltip
           :label="$t('nav.sections.' + sectionId + '.tooltip')"
@@ -40,7 +66,7 @@ export default {
   data () {
     return {
       isAtTopOfPage: true,
-      activeSection: 'interactiveHeader',
+      activeSection: null,
       sectionIds: [
         'testimonials',
         'myWork',
@@ -67,6 +93,10 @@ export default {
     })
   },
   methods: {
+    setActiveSection (sectionId) {
+      this.activeSection = sectionId
+      this.$refs.dropdown.closeMenu()
+    },
     handleScroll () {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       this.isAtTopOfPage = scrollTop < 50
@@ -137,9 +167,34 @@ export default {
       font-weight: bold;
       transition: color 0.5s;
 
+      &:hover,
       &.is-active-custom{
         color: $white !important;
       }
+    }
+  }
+  #back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:after{
+      content:'';
+      display: block;
+      width: 43px;
+      height:43px;
+      position: absolute;
+      top:3px;
+      left:3px;
+      z-index:-1;
+      border-radius: 100%;
+      background: $white;
+      box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.6);
+    }
+    &.visible{
+      opacity: 1;
     }
   }
 </style>

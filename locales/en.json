@@ -20,6 +20,9 @@
       }
     }
   },
+  "backToTop": {
+    "anchor": "Back to top"
+  },
   "home": {
     "titleProgrammer": "Programmer",
     "titleBusiness": "Business savvy",
@@ -54,13 +57,13 @@
       "date": "2008 - 2019",
       "title": "SaaS solution for high school student's study choice process",
       "role": "CTO Yubu",
-      "content": "In 2008 I launched the first version of StudieID which, after that company merged with BeInvolved, became to be Yubu in 2012. After a significant market penetration our competitor decided to rather buy us out. After a year long process of handing the company over I closed the chapter. <br>In this 12 year process I learned valuable lessons for every stage of a company. From the early start-up days to the growth fase to eventually your exit. During this project I got to learn from some of the best in the fields. I got code-tutored by `We Are Builders` (a successfull start-up studio from Rotterdam). During our investment rounds and during the selling of my business I got to learn from some experienced investors which gave me insight in some higher level business-strategies. All in all, the time spent working on Yubu made me the business savvy programmer I am today."
+      "content": "<b>Why</b><br>During my time at Yubu I made a difference for high school students. After making the ‘wrong’ choice for my own study, I figured that was a domain in which a thing or two could be improved. With Yubu we proved that that was both necessary and possible.<br><br><b>How</b><br>We started out with three founders. Guus Meijer, Kees Meershoek and myself. We started out as a small start-up and learned from the mistakes that you are supposed to make during this fase. Some knowledge we trained ourselves in, like dev-ops (Scrum). Other fields such as scalability and robustness of software purchased knowledge whereas in this case we had me privately schooled to perform on top-level. During this process I got code-tutored by `We Are Builders` (a successfull start-up studio from Rotterdam).<br><br><b>What</b><br>My responsibilities included the technical side of the product development, as well as the shared responsibility for strategic choices.<br>The success of our start-up we attribute to the focus on the end-user (the student) in our design-process. We built software and serious games, tailored to their needs. Students liked the fact that our product was actually designed for them instead of for the ‘study-choice counselors’.<br>During our investment rounds and during the selling of our business I got to learn from some experienced investors which gave me insight in some higher level business-strategies. All in all, the time spent working on Yubu made me the business savvy programmer I am today."
     },
     "greenlancers": {
       "date": "2020 - current project",
       "title": "NGO to mobilize growing number of freelancers for positive impact on sustainability",
       "role": "Founder Greenlancers",
-      "content": "I am taking up the challenge to pull my weight in the worlds sustainability struggle. Greenlancers mobilizes the growing number of freelancers worldwide to become nature's army."
+      "content": "<b>Why</b><br>In my opionion the world's biggest challenge at the moment is climate change. As an entrepreneur and programmer I am able to learn/measure/build scale-able concepts that have a bigger impact then solely changing my own behaviour. I am taking up the challenge to pull my weight in the worlds sustainability struggle.<br><br><b>How</b><br>Greenlancers mobilizes the growing number of freelancers worldwide to aid sustainability projects worldwide. By validating if, and validating how freelancers are willing to contribute a significant part of their revenue to sustainability projects.<br><br><b>What</b><br>Right now Green freelancers (Greenlancers) is validating concepts. As soon as a scale-able model is found, Greenlancers aims to grow and shift capital towards impactfull sustainability projects. Greenlancers will not become a commercial business. It will stay a non-profit."
     }
   },
   "skillset": {
@@ -68,81 +71,95 @@
     "subtitle": "Shortlist of used software and technical skills",
     "content": "My biggest strength is my cross-domain experience and knowledge. However, in the interest of full disclosure, see the list of my technical skills down below. This list is not exhaustive, but merely a summary of key-skills which I use on a day-to-day basis. Click on a skill for a more elaborate description.",
     "skills": {
-      "android":  {
-        "name": "Android",
-        "description": "If you ask me... Apple or Google? You will get a definite answer in a split second. To each his own, but for me it's Google."
-      },
       "chrome":  {
-        "name": "Chrome",
-        "description": "Simply can't live without it. Dev tools is essential for most developers."
+        "title": "Chrome",
+        "subtitle": "Web browser",
+        "description": "There are a lot of different browsers, such as FireFox, Safari, Opera and the renowned Internet Explorer. Chrome is one of the faster browsers and it offers an incredible functionality called 'dev-tools'. With this tool you can easily see what you build and what happens 'under the hood' of your software."
       },
       "composer":  {
-        "name": "Composer",
-        "description": "Simply can't live without it. Composer looks after all of my php-packages for me."
+        "title": "Composer",
+        "subtitle": "Package manager",
+        "description": "Programmers around the world build open-source packages that can save you valuable time. Composer is a tool to implement those in your own project, and keep up to date with new releases in which for example security issues are fixed."
       },
       "css":  {
-        "name": "Css",
-        "description": "When it comes to CSS I like to write CSS-only components. I find it a challenge to keep things as clean and lightweight as possible."
+        "title": "CSS",
+        "subtitle": "Style sheet language",
+        "description": "What CSS does is basically 'make website look good'. Without CSS the web would be a plain-looking place of boring websites."
       },
       "docker":  {
-        "name": "Docker",
-        "description": "With Docker you can run projects on your local machine almost identical to what you actually host in the web. This way 'it works on my machine so it should work' almost becomes a reasonable thing to say."
+        "title": "Docker",
+        "subtitle": "Container manager",
+        "description": "With Docker you can run projects in isolated containers on your local machine almost identical to what you actually host in the 'cloud'. With Docker you can develop a lot faster then if you would have to manually manage all your hosts on your computer."
       },
       "git":  {
-        "name": "Git",
-        "description": "In programming it's important to realise the immense amount of work others have done to make possible what we build now. Let us thank Linus Torvalds for creating GIT."
+        "title": "Git",
+        "subtitle": "Version control system",
+        "description": "With GIT teams can work on the same project simultaneously. Also if you work by yourself it's incredibly convenient for it's functionalities to manage different branches of your project. In programming it's important to realise the immense amount of work others have done to make possible what we build now. Let us thank Linus Torvalds for creating GIT."
       },
       "github":  {
-        "name": "Github",
-        "description": "My choice at this moment when it comes down to version control for my personal projects. I love how GitHub works together with the deployment service 'Travis'."
+        "title": "Github",
+        "subtitle": "Git hosting service",
+        "description": "Github is my choice at when it comes down to a host for version control for my personal projects. I love how GitHub works together with the deployment service 'Travis'. I am in no way dependent on Github. Any service like Bitbucket, Gitlab will do."
       },
       "html5":  {
-        "name": "Html5",
+        "title": "Html5",
+        "subtitle": "Markup language",
         "description": "Writing readable and understandable code is important, and html5 simplifies that. No reason not to love it."
       },
       "javascript":  {
-        "name": "Javascript",
-        "description": "The web wouldn't exist without it nowadays. My framework of choice is Vue. Though I also like to explore other frameworks from time to time."
+        "title": "Javascript",
+        "subtitle": "Programming language",
+        "description": "The web wouldn't exist without it nowadays. Javascript provides interactivity for website.<br><br><b>Favorite framework</b><br>Usually programmers do not write 'vanilla' javscript but use a framework instead. This gives you out-of-the-box components and functionalities to build your software with. My framework of choice is Vue. Though I also like to explore other frameworks from time to time."
       },
       "laravel":  {
-        "name": "Laravel",
-        "description": "Simple yet effective back-end framework based on PHP. I have worked with it for 5+ years now and loved every minute of it. "
+        "title": "Laravel",
+        "subtitle": "PHP framework",
+        "description": "Laravel is a simple yet effective back-end framework based on PHP. It provides structure and out-of-the-box functionalities that would otherwise cost valuable time. It is know for it's extensive documentation and active community.<br><br><b>Experience</b><br>I have worked with it for 7+ years now and loved every minute of it. "
       },
       "linux":  {
-        "name": "Linux",
-        "description": "This is my operation system of choice. You can say it's better, or faster, or more flexible... But to me it just comes down to 'more fun' then windows."
+        "title": "Linux",
+        "subtitle": "Operating system",
+        "description": "This is my operation system of choice. Examples of operation systems are Windows, macOS and Linux. You can say Linux is better, or faster, or more flexible... But to me it just comes down to 'more fun'."
       },
       "mysql":  {
-        "name": "Mysql",
-        "description": "Even though I would never use MySQL in a new project anymore, but plenty existing projects are still run by MySQL. If you consider that you learn from making mistakes... I've learnt basically everything about MySQL."
+        "title": "Mysql",
+        "subtitle": "Database language",
+        "description": "Software is usually powered by a database. You need a way of accessing that database to get data or update data.<br>Even though I would never use MySQL in a new project anymore, plenty existing projects are still run by MySQL. So it's good to consider that if you learn from making mistakes... I've learnt basically everything about MySQL there is to know."
       },
       "nodejs":  {
-        "name": "Nodejs",
-        "description": "What is there to say... Can't live without it. Node does the heavy javscript lifting."
+        "title": "Nodejs",
+        "subtitle": "JavaScript runtime environment",
+        "description": "NodeJS together with NPM takes care of all Javascript packages. Both locally within docker as on the server side. Node does the heavy Javascript lifting because handling that manually is impossible nowadays."
       },
       "php":  {
-        "name": "Php",
-        "description": "You either love this back-end programming language or you hate it. After more then 15 years of getting to know all of it's little quirks and strange behaviours sometimes you can guess which side I am on. My favorite framework is Laravel but I do like to explore other frameworks from time to time."
+        "title": "Php",
+        "subtitle": "Programming language",
+        "description": "You either love this back-end programming language or you hate it.After more then 15 years of getting to know all of it's little quirks and strange behaviours sometimes you can guess which side I am on.<br><br><b>Favorite framework</b><br>Usually programmers do not write plain php but use a framework instead. This gives you out-of-the-box structure and functionalities to build your software with. My favorite framework is Laravel but I do like to explore other frameworks from time to time."
       },
       "phpstorm":  {
-        "name": "Phpstorm",
-        "description": "PhpStorm has been my IDE for years and it does not keep many secrets for me."
+        "title": "Phpstorm",
+        "subtitle": "IDE (Integrated development environment)",
+        "description": "'PhpStorm' stands to programmers as 'Microsoft Excel' stands to Business controllers. Simplistically: an IDE automates otherwise manual operations for programmers."
       },
       "postgresql":  {
-        "name": "Postgresql",
-        "description": "MySQL used to be my weapon of choice because the strictness that comes with Postgres did not appeal to me at first. Now I would not want anything else."
+        "title": "PostgreSQL",
+        "subtitle": "Database language",
+        "description": "Software is usually powered by a database. You need a way of accessing that database to get data or update data.<br>PostgreSQL is a more mature version of MySQL. It is more strict and therefore less error-prone. PostgreSQL would be my weapon of choice for new projects."
       },
       "postman":  {
-        "name": "Postman",
-        "description": "Can not work without Postman when developing and testing API's. It has saved me important hours in the past and will continue to do so."
+        "title": "Postman",
+        "subtitle": "API-software",
+        "description": "When building an API it is really convenient to be able to easily test the endpoints that you build. Postman does that for you with an easy to use interface. I could not work without Postman when developing and testing API's. It has saved me important hours in the past and will continue to do so."
       },
       "stack":  {
-        "name": "Stack",
-        "description": "What to say about stack-overflow. Whenever SO is down, I rather go get myself a cup of coffee. Or two..."
+        "title": "Stack-overflow (SO)",
+        "subtitle": "FAQ-platform for programmers",
+        "description": "The programmers community is a tight one. Everyone helps each other. Stack-overflow basically contains every possible error or question you can have about any programming language.<br>Whenever SO is down during debugging, I rather go get myself a cup of coffee. Or two..."
       },
       "vue":  {
-        "name": "Vue",
-        "description": "Vue is a front-end framework that works really well with Laravel. Worked with it most of my time at Yubu which means I have 5+ years of experience with it."
+        "title": "Vue",
+        "subtitle": "Javascript framework",
+        "description": "Vue is a front-end framework that works really well with Laravel. It provides structure and out-of-the-box functionalities that would otherwise cost valuable time.<br><br><b>Experience</b><br>I worked with it most of my time at Yubu which means I have 7+ years of experience with it."
       }
     }
   },

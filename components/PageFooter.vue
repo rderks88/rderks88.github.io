@@ -21,7 +21,7 @@
           </div>
           <div id="detailsColumn" class="column">
             <h5 class="subtitle is-6 has-text-white-ter">
-              Rob Derks projects & Investments BV
+              Rob Derks Projects & Investments BV
             </h5>
             <h5 class="subtitle is-7 has-text-grey-light">
               <font-awesome-icon :icon="['fab', 'slack-hash']" />&nbsp;&nbsp;&nbsp;
