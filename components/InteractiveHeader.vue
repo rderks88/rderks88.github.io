@@ -129,9 +129,7 @@ export default {
       idleTimer: null,
       leftCrossEyed: 46,
       rightCrossEyed: 54,
-      crossEyedTimer: null,
-      timesSeenProgrammer: 0,
-      timesSeenBusiness: 0
+      crossEyedTimer: null
     }
   },
   mounted () {
@@ -155,7 +153,6 @@ export default {
     behaveIdle () {
       clearInterval(this.idleTimer)
       this.idleTimer = setInterval(() => {
-        // console.log('behaveIdle')
         if (this.percentage >= 50) {
           this.shift(this.leftIdle)
         } else {
@@ -200,13 +197,6 @@ export default {
       }
     },
     shift (newPercentage) {
-      // track how often both sides are "seen" for button visibility
-      if (newPercentage >= this.rightIdle && this.oldPercentage < this.rightIdle) {
-        this.timesSeenProgrammer += 1
-      } else if (newPercentage <= this.leftIdle && this.oldPercentage > this.leftIdle) {
-        this.timesSeenBusiness += 1
-      }
-
       // set new percentages
       newPercentage = Math.round(newPercentage)
       this.oldPercentage = newPercentage
@@ -385,7 +375,7 @@ export default {
   }
 
   .call-to-action{
-    z-index: 100;
+    z-index: 5;
   }
 
 </style>

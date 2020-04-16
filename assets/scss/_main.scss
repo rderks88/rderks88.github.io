@@ -33,15 +33,21 @@
   }
 }
 
+// The Buefy nav-bar has some issues when used with Nuxt and variables
+// Sadly enough the easy fix is to overwrite a few variables with !important
+html.has-navbar-fixed-top {
+  padding-top: 0 !important;
+}
+
+$navbar-item-active-background-color: transparent !important;
+$navbar-item-hover-background-color: transparent !important;
+$navbar-item-hover-color: rgba($white,0.5) !important;
+$navbar-item-color: rgba($white,0.5) !important;
+$navbar-item-active-color: rgba($white,0.5) !important;
+
 // Custom changes
 $body-color: $grey;
 $control-height: 2.5em;
-
-$navbar-item-active-background-color: none;
-$navbar-item-active-color: $white;
-$navbar-item-hover-background-color: none;
-$navbar-item-hover-color: $white;
-$navbar-item-color: rgba($white,0.5);
 
 // Own versions of animations.css
 @import "animations";

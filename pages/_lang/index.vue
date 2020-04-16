@@ -44,7 +44,8 @@ export default {
 
     // Give every section a small shadow
     // Done with linear gradient to prevent weird drop shadow corners
-    &::before {
+    // First does not get any, because that shadow already comes from the navBar
+    &:not(:first-child)::before {
       content: '';
       display: block;
       position: absolute;

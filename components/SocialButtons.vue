@@ -74,6 +74,8 @@ export default {
 </script>
 <style lang="scss">
   .socialButtons{
-    padding-right: 8px;
+    & .b-tooltip:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 </style>

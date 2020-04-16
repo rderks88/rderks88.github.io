@@ -134,7 +134,7 @@ export default {
   }
 
   .testimonial-content{
-    min-height: 200px;
+    min-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
