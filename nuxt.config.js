@@ -9,7 +9,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Rob Derks - business savvy programmer',
     meta: [
       { charset: 'utf-8' },
       {
