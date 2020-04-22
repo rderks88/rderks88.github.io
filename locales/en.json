@@ -12,7 +12,7 @@
       },
       "skills": {
         "tooltip": "How I do what I do",
-        "anchor": "Skillset"
+        "anchor": "Skill set"
       },
       "contactForm": {
         "tooltip": "What we can do together",
@@ -28,7 +28,7 @@
     "titleBusiness": "Business savvy",
     "subtitleProgrammer": "Making a difference by building elegant solutions to complex problems.",
     "subtitleBusiness": "Improving revenue streams by using a highly analytical mindset to connect technology and business.",
-    "buttonProgrammer": "Get in contact",
+    "buttonProgrammer": "Learn more",
     "buttonBusiness": "Learn more"
   },
   "testimonials": {
@@ -61,9 +61,9 @@
     },
     "greenlancers": {
       "date": "2020 - current project",
-      "title": "NGO to mobilize growing number of freelancers for positive impact on sustainability",
+      "title": "Start-up to mobilize growing number of freelancers for positive impact on sustainability",
       "role": "Founder Greenlancers",
-      "content": "<b>Why</b><br>In my opionion the world's biggest challenge at the moment is climate change. As an entrepreneur and programmer I am able to learn/measure/build scale-able concepts that have a bigger impact then solely changing my own behaviour. I am taking up the challenge to pull my weight in the worlds sustainability struggle.<br><br><b>How</b><br>Greenlancers mobilizes the growing number of freelancers worldwide to aid sustainability projects worldwide. By validating if, and validating how freelancers are willing to contribute a significant part of their revenue to sustainability projects.<br><br><b>What</b><br>Right now Green freelancers (Greenlancers) is validating concepts. As soon as a scale-able model is found, Greenlancers aims to grow and shift capital towards impactfull sustainability projects. Greenlancers will not become a commercial business. It will stay a non-profit."
+      "content": "<b>Why</b><br>In my opionion the world's biggest challenge at the moment is climate change. As an entrepreneur and programmer I am able to learn/measure/build scale-able concepts that have a bigger impact then solely changing my own behaviour. I am taking up the challenge to pull my weight in the worlds sustainability struggle.<br><br><b>How</b><br>Greenlancers mobilizes the growing number of freelancers worldwide to aid sustainability projects worldwide. By validating if, and validating how freelancers are willing to contribute a significant part of their revenue to sustainability projects.<br><br><b>What</b><br>Right now Green freelancers (Greenlancers) is validating concepts. As soon as a scale-able model is found, Greenlancers aims to grow and shift capital towards impactfull sustainability projects."
     }
   },
   "skillset": {

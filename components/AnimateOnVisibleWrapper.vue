@@ -11,7 +11,7 @@
       fadeInRight: isVisible && position === 'right'
     }"
   >
-    <slot name="default"/>
+    <slot name="default" />
   </div>
 </template>
 <script>
@@ -39,3 +39,10 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .animate-on-invisible-wrapper{
+    width: 100%;
+    max-width:500px;
+    display: inline-block;
+  }
+</style>

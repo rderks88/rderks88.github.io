@@ -43,7 +43,7 @@
             <b-button
               v-smooth-scroll
               tag="a"
-              href="#contactForm"
+              href="#testimonials"
               target="_self"
               type="is-primary"
               outlined

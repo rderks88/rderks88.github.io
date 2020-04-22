@@ -15,7 +15,7 @@
                 <h4 class="subtitle is-5 has-text-grey-light">
                   {{ $t('footer.subtitle') }}
                 </h4>
-                <social-buttons type="is-dark" tooltipDirection="is-top"></social-buttons>
+                <social-buttons type="is-dark" tooltip-direction="is-top" />
               </div>
             </div>
           </div>

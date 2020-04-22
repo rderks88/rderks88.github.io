@@ -16,10 +16,10 @@
     <div class="project-wrapper columns is-multiline is-centered is-desktop">
       <div class="column is-9-desktop is-6-widescreen">
         <div class="columns is-multiline is-variable is-8 reverse-columns">
-          <div class="column is-6">
+          <div class="column is-6 has-text-right-tablet">
             <animate-on-visible-wrapper position="left">
               <website>
-                <img src="~/assets/screencapture-yubu.png" alt="Screenshot Yubu-website">
+                <img id="yubu-image" src="~/assets/screencapture-yubu.png" alt="Screenshot Yubu-website">
               </website>
             </animate-on-visible-wrapper>
           </div>
@@ -34,6 +34,7 @@
             <h4 class="subtitle is-5 has-text-grey-dark">
               {{ $t('myWork.yubu.title') }}
             </h4>
+            <!--eslint-disable-next-line vue/no-v-html-->
             <p class="has-text-justified" v-html="$t('myWork.yubu.content')" />
           </div>
         </div>
@@ -54,9 +55,10 @@
             <h4 class="subtitle is-5 has-text-grey-dark has-text-right">
               {{ $t('myWork.greenlancers.title') }}
             </h4>
+            <!--eslint-disable-next-line vue/no-v-html-->
             <p class="has-text-justified" v-html="$t('myWork.greenlancers.content')" />
           </div>
-          <div class="column is-6 has-text-right">
+          <div class="column is-6 has-text-left">
             <animate-on-visible-wrapper position="right">
               <phone>
                 <img src="~/assets/screencapture-greenlancers.jpg" alt="Screenshot Greenlancers-app">
@@ -86,5 +88,8 @@ export default {
 <style lang="scss">
   .project-wrapper {
     padding-bottom: 50px;
+  }
+  #yubu-image{
+    width: 100%;
   }
 </style>

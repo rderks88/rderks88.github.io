@@ -3,7 +3,7 @@
     "buttonLanguageTooltip": "English?",
     "sections": {
       "testimonials": {
-        "tooltip": "Referenties van oude collega's",
+        "tooltip": "Referenties van vroegere collega's",
         "anchor": "Referenties"
       },
       "myWork": {
@@ -27,9 +27,9 @@
     "titleProgrammer": "Programmeur",
     "titleBusiness": "Zakelijk inzicht",
     "subtitleProgrammer": "Maak het verschil door het bouwen van elegante oplossingen voor complexe problemen.",
-    "subtitleBusiness": "Efficientie door middel van een hoog analytisch vermogen en de combinatie van technologie en bedrijfsperspectief.",
-    "buttonProgrammer": "Hire me",
-    "buttonBusiness": "Hire me"
+    "subtitleBusiness": "Efficiëntie door middel van een hoog analytisch vermogen en de combinatie van technologie en bedrijfsperspectief.",
+    "buttonProgrammer": "Lees meer",
+    "buttonBusiness": "Lees meer"
   },
   "testimonials": {
     "title": "Ik ben Rob Derks",
@@ -51,25 +51,25 @@
     }
   },
   "myWork": {
-    "title": "Het verschil maken",
-    "subtitle": "Dat is de rode draad in mijn werk",
+    "title": "Een verschil maken",
+    "subtitle": "Daar krijg ik energie van",
     "yubu": {
       "date": "2008 - 2019",
-      "title": "SaaS voor studiekeuze van middelbare scholieren",
+      "title": "SaaS oplossing voor studiekeuze van middelbare scholieren",
       "role": "CTO Yubu",
-      "content": "In 2008 I launched the first version of StudieID which, after that company merged with BeInvolved, became to be Yubu in 2012. After a significant market penetration our competitor decided to rather buy us out. After a year long process of handing the company over I closed the chapter. <br>In this 12 year process I learned valuable lessons for every stage of a company. From the early start-up days to the growth fase to eventually your exit. During this project I got to learn from some of the best in the fields. I got code-tutored by `We Are Builders` (a successfull start-up studio from Rotterdam). During our investment rounds and during the selling of my business I got to learn from some experienced investors which gave me insight in some higher level business-strategies. All in all, the time spent working on Yubu made me the business savvy programmer I am today."
+      "content": "<b>Waarom</b><br>Met Yubu maakten wij het verschil voor middelbare scholieren. Na mijn eigen dramatische studiekeuzeproces, wist ik dat er het een en ander binnen het studiekeuzedomein verbeterd kon worden. Met Yubu hebben we bewezen dat een verbeteringsslag gemaakt kon worden en dat daar ook behoefte naar was.<br><br><b>Hoe</b><br>We zijn begonnen met drie oprichters. Guus Meijer, Kees Meershoek en ikzelf. We begonnen als een kleine start-up en hebben ontzettend veel geleerd van het proces. Op vlakken als 'studiekeuze' of 'dev-ops' (Scrum) hebben we onszelf getraind. Op andere vlakken zoals de schaalbaarheid en robuustheid van onze software hebben we kennis ingekocht. In het laatste geval hebben we een privé couch ingehuurd die mij heeft getraind tot een top-level programmeur. In dit proces zijn we begeleid door `We Are Builders` (een succesvolle start-up studio uit Rotterdam).<br><br><b>Wat</b><br>Bij Yubu was ik verantwoordelijk voor de technische uitvoering, maar had ook de gedeelde verantwoordelijkheid voor de strategische keuzes.<br>Het succes van onze start-up schrijven wij toe aan onze focus op de eindegebruiker (de scholier) in ons ontwerpproces. Wij bouwden software en serious games, afgestemd op hun behoeftes. Scholieren reageerden erg positief op een product wat eindelijk naar hén luisterde in plaats van alleen maar naar de wensen van de decaan.<br>Tijdens onze investeringsrondes en tijdens de verkoop van ons bedrijf heb ik mogen leren van door de wol geverfde investeerders waardoor ik inzicht heb gekregen in business-strategieën van de hoogste plank. Samengevat, binnen de tijd bij Yubu heb ik me ontwikkeld tot de programmeur met zakelijk inzicht die ik nu ben."
     },
     "greenlancers": {
-      "date": "2020 - current project",
-      "title": "NGO to mobilize growing number of freelancers for positive impact on sustainability",
-      "role": "Founder Greenlancers",
-      "content": "I am taking up the challenge to pull my weight in the worlds sustainability struggle. Greenlancers mobilizes the growing number of freelancers worldwide to become nature's army."
+      "date": "2020 - huidige project",
+      "title": "Start-up om het groeiende aantal freelancers te faciliteren om een positieve invloed te hebben op de klimaatproblematiek.",
+      "role": "Oprichter Greenlancers",
+      "content": "<b>Waarom</b><br>Naar mijn mening is de klimaatverandering the grootste uitdaging waar we nu met zijn allen voor staan. Als een ondernemende programmeur kan ik schaalbare concepten bouwen die in potentie veel meer impacht hebben dan de hoeveelheid impact die het aanpassen van mijn eigen gedrag zou hebben. Ik ga de uitdaging aan om mijn steentje bij te dragen aan deze klimaatuitdating.<br><br><b>Hoe</b><br>Greenlancers faciliteert het groeiende aantal freelancers om zich naast en tijdens hun werkzaamheden in te zetten voor een betere wereld. Door te valideren of, en te valideren hoe freelancers bereid zijn om een gedeelte van hun omzet af te staan aan impactvolle klimaatpositieve projecten wereldwijd.<br><br><b>Wat</b><br>Op dit moment is 'Green freelancers' (Greenlancers) concepten aan het valideren. Zodra een schaalbaar model gevalideerd is, wil Greenlancers groeien en zo kapitaal verplaatsen naar klimaat-positieve projecten/bedrijven."
     }
   },
   "skillset": {
     "title": "Maar... maar... hoe dan?",
     "subtitle": "Een kort overzicht van software en technische skills",
-    "content": "Even though my biggest strength is my cross-domain experience and knowledge, I thought it is important to give an overview of my technical skills. In no way is belowmentioned list exhausting but most important skills are shown. Click on a skill for a more elaborate description.",
+    "content": "Ook al is mijn sterkste punt mijn domein-overstijgende ervaring en kennis, vind ik het belangrijk een overzicht te geven van mijn technische skills. Deze lijst is niet compleet, maar is slechts een lijst van mijn favoriete technieken en software. Klik op een skill voor een uitgebreidere beschrijving.",
     "skills": {
       "chrome":  {
         "name": "Chrome",
@@ -146,32 +146,32 @@
     }
   },
   "contactForm": {
-    "title": "Pop me a message",
-    "subtitle": "And hire me for your next project...",
+    "title": "Stuur me een bericht",
+    "subtitle": "En laten we samen werken aan jouw volgende project...",
     "placeholders": {
-      "name": "Name",
-      "phone": "Phone",
-      "email": "Email",
-      "comment": "Your message"
+      "name": "Naam",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "comment": "Je bericht"
     },
     "validation": {
-      "name": "My name is Rob, what's yours?",
-      "phone": "Let's chat. Please fill in your phone number.",
-      "email": "Mine is hello@robderks.com. What's yours?",
-      "invalidEmail": "This email does not seem legit, please double-check.",
-      "comment": "What can I help you with?",
-      "toast": "Please solve the errors."
+      "name": "Ik heet Rob, hoe heet jij?",
+      "phone": "Soms is bellen wel zo prettig. Vul a.u.b. je telefoonnummer in.",
+      "email": "De mijne is hello@robderks.com. Wat is die van jou?",
+      "invalidEmail": "Deze e-mail lijkt niet te kloppen, kijk je hem even na?",
+      "comment": "Waar kan ik je mee helpen?",
+      "toast": "Los bovenstaande problemen a.u.b. op"
     },
     "fallBackAlert": {
       "title":"Error",
-      "message":"Something unexpected went wrong. Please send an email directly to hello@robderks.com.",
+      "message":"Er is iets onverwachts misgegaan. Stuur direct een e-mail naar hello@robderks.com.",
       "confirmText":"Ok"
     },
-    "submit": "Send message",
+    "submit": "Verstuur bericht",
     "thanks": {
-      "title": "Thank you for reaching out. We'll be in contact soon.",
+      "title": "Bedankt voor je bericht. Ik spreek je snel!",
       "subtitle": "@RobDerks",
-      "disclaimer": "Your personal data will be handled carefully and will not be shared with anyone."
+      "disclaimer": "Met je persoonlijke gegevens wordt secuur omgegaan en zullen met niemand gedeeld worden."
     }
   },
   "footer": {

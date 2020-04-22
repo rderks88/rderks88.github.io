@@ -52,6 +52,7 @@ export default {
   ** Within this css we edit the defaults for Buefy
   */
   plugins: [
+    { src: '~plugins/ga.js', mode: 'client' },
     '~/plugins/vue-observe-visibility',
     '~/plugins/vue2-smooth-scroll',
     '~/plugins/i18n.js'

@@ -8,7 +8,7 @@
       :animated="true"
     >
       <a class="button" :class="type" href="/nl" target="_top">
-        <font-awesome-icon :icon="['fas', 'language']"/>
+        <font-awesome-icon :icon="['fas', 'language']" />
       </a>
     </b-tooltip>
     <b-tooltip
@@ -19,7 +19,7 @@
       :animated="true"
     >
       <a class="button" :class="type" href="/en" target="_top">
-        <font-awesome-icon :icon="['fas', 'language']"/>
+        <font-awesome-icon :icon="['fas', 'language']" />
       </a>
     </b-tooltip>
     <b-tooltip
@@ -29,7 +29,7 @@
       :animated="true"
     >
       <a class="button" :class="type" href="mailto:hello@robderks.com" target="_top">
-        <font-awesome-icon :icon="['fas', 'envelope']"/>
+        <font-awesome-icon :icon="['fas', 'envelope']" />
       </a>
     </b-tooltip>
     <b-tooltip
@@ -39,7 +39,7 @@
       :animated="true"
     >
       <a class="button" :class="type" href="https://www.linkedin.com/in/iamrobderks/" target="_blank">
-        <font-awesome-icon :icon="['fab', 'linkedin-in']"/>
+        <font-awesome-icon :icon="['fab', 'linkedin-in']" />
       </a>
     </b-tooltip>
     <b-tooltip
@@ -49,7 +49,7 @@
       :animated="true"
     >
       <a class="button" :class="type" href="https://github.com/rderks88/rderks88.github.io/tree/development" target="_blank">
-        <font-awesome-icon :icon="['fab', 'github']"/>
+        <font-awesome-icon :icon="['fab', 'github']" />
       </a>
     </b-tooltip>
   </div>
