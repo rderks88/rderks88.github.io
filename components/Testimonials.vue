@@ -48,7 +48,7 @@
 <script>
 import Guus from '~/assets/guus.jpg'
 import Kees from '~/assets/kees.jpg'
-import Alex from '~/assets/alex.jpg'
+// import Alex from '~/assets/alex.jpg'
 
 export default {
   data () {
@@ -60,12 +60,12 @@ export default {
           img: Guus,
           content: this.$t('testimonials.guus.content')
         },
-        {
+        /*        {
           name: this.$t('testimonials.alex.name'),
           role: this.$t('testimonials.alex.role'),
           img: Alex,
           content: this.$t('testimonials.alex.content')
-        },
+        }, */
         {
           name: this.$t('testimonials.kees.name'),
           role: this.$t('testimonials.kees.role'),
